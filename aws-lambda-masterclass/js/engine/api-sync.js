@@ -138,7 +138,7 @@ class ApiSyncEngine {
         currentModuleId,
         lastLessonId,
         completedSections,
-        moduleData.completed || false,
+        moduleData.complete || false,
         progressEngine.data.masteryLevel || 'beginner'
       );
     });

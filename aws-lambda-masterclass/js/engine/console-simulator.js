@@ -61,7 +61,7 @@ class ConsoleSimulator {
       <span class="console-navbar-logo">☁️ AWS</span>
       <span class="console-navbar-service">${this._escapeHtml(this.service)}</span>
       <span style="flex: 1;"></span>
-      <span style="font-size: 11px; color: var(--color-neutral-500);">🧪 Simulated Console</span>
+      <span style="font-size: 11px; color: var(--color-neutral-500);">${MCI18n.t('console.simulated')}</span>
     `;
     wrapper.appendChild(navbar);
 
@@ -81,7 +81,7 @@ class ConsoleSimulator {
           ${step.why ? `<div style="font-size: 12px; color: var(--color-accent-500);">💡 ${this._escapeHtml(step.why)}</div>` : ''}
         </div>
         <div style="font-size: 12px; color: var(--color-neutral-400);">
-          Step ${this.currentStep + 1} of ${this.steps.length}
+          ${MCI18n.t('console.stepOf', { i: this.currentStep + 1, n: this.steps.length })}
         </div>
       `;
       wrapper.appendChild(instructionBar);
@@ -218,11 +218,7 @@ class ConsoleSimulator {
     if (this.onComplete) this.onComplete();
   }
 
-  _escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
+  _escapeHtml(str) { return MCUtils.escapeHtml(str); }
 
   reset() {
     this.currentStep = 0;

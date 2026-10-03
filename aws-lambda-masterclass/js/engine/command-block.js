@@ -53,7 +53,7 @@ class CommandBlock {
       'python': { bg: '#fbbf2433', color: '#fbbf24' },
       'node': { bg: '#22c55e33', color: '#22c55e' },
       'git': { bg: '#f4722b33', color: '#f4722b' },
-      'linux': { bg: '#94a3b833', color: '#94a3b8' }
+      'linux': { bg: '#a1a1aa33', color: '#a1a1aa' }
     };
     const cc = catColors[this.category] || catColors['linux'];
     categoryBadge.style.background = cc.bg;
@@ -65,21 +65,21 @@ class CommandBlock {
     const actions = document.createElement('div');
     actions.className = 'flex gap-2';
     
-    const copyBtn = this._btn('📋 Copy', () => this._copy());
+    const copyBtn = this._btn(MCI18n.t('cmd.copy'), () => this._copy());
     actions.appendChild(copyBtn);
 
     if (this.onRun) {
-      const runBtn = this._btn('▶ Run', () => this._runCmd());
+      const runBtn = this._btn(MCI18n.t('cmd.run'), () => this._runCmd());
       runBtn.style.background = 'var(--color-success-500)';
       runBtn.style.color = '#fff';
       actions.appendChild(runBtn);
     }
 
-    const explainBtn = this._btn('💡 Explain', () => this._toggleSection('explain'));
+    const explainBtn = this._btn(MCI18n.t('cmd.explain'), () => this._toggleSection('explain'));
     actions.appendChild(explainBtn);
 
     if (this.onTryIt) {
-      const tryBtn = this._btn('🧪 Try It', () => this.onTryIt(this.command));
+      const tryBtn = this._btn(MCI18n.t('cmd.tryIt'), () => this.onTryIt(this.command));
       actions.appendChild(tryBtn);
     }
 
@@ -94,7 +94,7 @@ class CommandBlock {
 
     // Expected output (collapsible)
     if (this.expectedOutput) {
-      const outputSection = this._collapsible('expected-output', '📤 Expected Output', `
+      const outputSection = this._collapsible('expected-output', MCI18n.t('cmd.expectedOutput'), `
         <pre style="margin: 0; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px; color: #a9b1d6; font-size: 13px; white-space: pre-wrap;">${this._escapeHtml(this.expectedOutput)}</pre>
       `);
       wrapper.appendChild(outputSection);
@@ -102,7 +102,7 @@ class CommandBlock {
 
     // Explanation (collapsible)
     if (this.explanation) {
-      const explainSection = this._collapsible('explain', '💡 What This Command Does', `
+      const explainSection = this._collapsible('explain', MCI18n.t('cmd.whatItDoes'), `
         <div style="font-size: 14px; line-height: 1.7; color: var(--color-neutral-700);">${this._escapeHtml(this.explanation)}</div>
       `);
       wrapper.appendChild(explainSection);
@@ -117,13 +117,13 @@ class CommandBlock {
           <div style="font-size: 13px; color: var(--color-success-700); margin-top: 4px;"><strong>Fix:</strong> ${this._escapeHtml(err.fix)}</div>
         </div>
       `).join('');
-      const errSection = this._collapsible('errors', '⚠️ Common Errors', errorsHtml);
+      const errSection = this._collapsible('errors', MCI18n.t('cmd.commonErrors'), errorsHtml);
       wrapper.appendChild(errSection);
     }
 
     // Interview question (collapsible)
     if (this.interviewQ) {
-      const iqSection = this._collapsible('interview', '🎤 Interview Question', `
+      const iqSection = this._collapsible('interview', MCI18n.t('cmd.interviewQuestion'), `
         <div style="font-size: 14px; line-height: 1.7; color: var(--color-neutral-700); font-style: italic;">"${this._escapeHtml(this.interviewQ)}"</div>
       `);
       wrapper.appendChild(iqSection);
@@ -210,11 +210,7 @@ class CommandBlock {
     }, 600);
   }
 
-  _escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
+  _escapeHtml(str) { return MCUtils.escapeHtml(str); }
 
   destroy() {
     this.container.innerHTML = '';

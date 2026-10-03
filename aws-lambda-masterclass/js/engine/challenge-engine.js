@@ -140,13 +140,13 @@ class ChallengeEngine {
 
     const submitBtn = document.createElement('button');
     submitBtn.className = 'btn btn-sm btn-primary';
-    submitBtn.textContent = '🧪 Submit & Test';
+    submitBtn.textContent = MCI18n.t('challenge.submitTest');
     submitBtn.addEventListener('click', () => this._evaluate());
     leftActions.appendChild(submitBtn);
 
     const resetBtn = document.createElement('button');
     resetBtn.className = 'btn btn-sm btn-secondary';
-    resetBtn.textContent = '🔄 Reset';
+    resetBtn.textContent = MCI18n.t('challenge.reset');
     resetBtn.addEventListener('click', () => {
       this.codeArea.value = this.starterCode;
     });
@@ -157,7 +157,7 @@ class ChallengeEngine {
     // Hint button
     const hintBtn = document.createElement('button');
     hintBtn.className = 'btn btn-sm btn-ghost';
-    hintBtn.textContent = `💡 Hint (${this.revealedHints}/${this.hints.length})`;
+    hintBtn.textContent = MCI18n.t('challenge.hint', { a: this.revealedHints, n: this.hints.length });
     hintBtn.addEventListener('click', () => this._revealHint());
     actionsSection.appendChild(hintBtn);
     this.hintBtn = hintBtn;
@@ -192,7 +192,7 @@ class ChallengeEngine {
     if (this.revealedHints >= this.hints.length) return;
     
     this.revealedHints++;
-    this.hintBtn.textContent = `💡 Hint (${this.revealedHints}/${this.hints.length})`;
+    this.hintBtn.textContent = MCI18n.t('challenge.hint', { a: this.revealedHints, n: this.hints.length });
     
     this.hintsArea.style.display = 'block';
     this.hintsArea.innerHTML = this.hints.slice(0, this.revealedHints).map((h, i) => `
@@ -242,9 +242,9 @@ class ChallengeEngine {
         <span style="font-size: 32px;">${allPassed ? '🎉' : '🔧'}</span>
         <div>
           <div style="font-size: 18px; font-weight: 700; color: ${allPassed ? 'var(--color-success-600)' : 'var(--color-error-600)'};">
-            ${allPassed ? 'All Tests Passed!' : `${passed}/${total} Tests Passed`}
+            ${allPassed ? MCI18n.t('challenge.allPassed') : MCI18n.t('challenge.testsPassed', { p: passed, t: total })}
           </div>
-          <div style="font-size: 13px; color: var(--color-neutral-500);">Attempt #${this.attempts}</div>
+          <div style="font-size: 13px; color: var(--color-neutral-500);">${MCI18n.t('challenge.attempt', { n: this.attempts })}</div>
         </div>
       </div>
       ${results.map(r => `
@@ -270,11 +270,7 @@ class ChallengeEngine {
     }
   }
 
-  _escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
+  _escapeHtml(str) { return MCUtils.escapeHtml(str); }
 
   getCode() {
     return this.codeArea.value;

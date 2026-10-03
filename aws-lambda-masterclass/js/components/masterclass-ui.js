@@ -74,13 +74,21 @@
         console.error('[MasterclassUI] CodeEditorEngine not loaded.');
         return null;
       }
+      // Normalize facade options to the engine's languages[] contract
+      const languages = options.languages || [{
+        id: options.language || 'python',
+        label: options.languageLabel || options.language || 'Python',
+        code: options.code || '',
+        explanations: options.explanations || []
+      }];
       return new CodeEditorEngine(container, {
         title: options.title || 'Code Workspace',
-        language: options.language || 'python',
-        code: options.code || '',
-        readOnly: options.readOnly || false,
-        onRun: options.onRun || null,
-        onReset: options.onReset || null
+        languages,
+        defaultLang: options.defaultLang || languages[0].id,
+        editable: options.editable !== false && !options.readOnly,
+        showLineNumbers: options.showLineNumbers !== false,
+        expectedOutput: options.expectedOutput || '',
+        onRun: options.onRun || null
       });
     },
 
@@ -102,9 +110,14 @@
       }
       return new QuizEngine(container, {
         title: options.title || 'Knowledge Assessment',
+        type: options.type || 'knowledge-check',
         questions: options.questions || [],
-        onSubmit: options.onSubmit || null,
-        onQuestionAnswer: options.onQuestionAnswer || null
+        showImmediate: options.showImmediate,
+        shuffleOptions: options.shuffleOptions,
+        onComplete: options.onSubmit
+          ? (score, total) => options.onSubmit({ score, total, percentage: Math.round((score / total) * 100) }, score)
+          : (options.onComplete || null),
+        onAnswer: options.onQuestionAnswer || null
       });
     },
 
@@ -126,8 +139,10 @@
       return new DiagramEngine(container, {
         title: options.title || 'System Architecture Flow',
         nodes: options.nodes || [],
-        connections: options.connections || [],
-        interactive: options.interactive !== false
+        edges: options.edges || options.connections || [],
+        width: options.width,
+        height: options.height,
+        onNodeClick: options.onNodeClick || null
       });
     },
 
@@ -148,9 +163,13 @@
       }
       return new LabEngine(container, {
         title: options.title || 'Hands-On Lab Scenario',
+        description: options.description || '',
+        difficulty: options.difficulty || 'beginner',
+        duration: options.duration || '15 min',
+        prerequisites: options.prerequisites || [],
         steps: options.steps || [],
-        onStepComplete: options.onStepComplete || null,
-        onLabComplete: options.onLabComplete || null
+        resources: options.resources || [],
+        onComplete: options.onLabComplete || options.onComplete || null
       });
     },
 
@@ -169,9 +188,11 @@
         return null;
       }
       return new ConsoleSimulator(container, {
-        serviceName: options.serviceName || 'Cloud Management Console',
-        tabs: options.tabs || [],
-        actions: options.actions || []
+        service: options.service || options.serviceName || 'Cloud Management Console',
+        title: options.title,
+        steps: options.steps || [],
+        screens: options.screens || {},
+        onComplete: options.onComplete || null
       });
     },
 
@@ -191,8 +212,13 @@
       }
       return new CommandBlock(container, {
         command: options.command || '',
-        title: options.title || '',
-        description: options.description || ''
+        category: options.category || 'aws-cli',
+        expectedOutput: options.expectedOutput || '',
+        explanation: options.explanation || options.description || '',
+        commonErrors: options.commonErrors || [],
+        interviewQ: options.interviewQ || '',
+        onRun: options.onRun || null,
+        onTryIt: options.onTryIt || null
       });
     },
 

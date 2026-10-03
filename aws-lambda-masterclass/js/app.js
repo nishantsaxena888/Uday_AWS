@@ -46,6 +46,20 @@ class App {
     this._setupTopbarProgress();
     this._renderSidebar();
 
+    // Register the live lesson so progress math uses real section IDs
+    if (moduleData) {
+      this.progress.registerLesson(
+        moduleData.moduleId || this.currentModule,
+        moduleData.id,
+        (moduleData.sections || []).map(s => s.id)
+      );
+    }
+
+    // Sync progress to the backend API (graceful no-op if unavailable)
+    if (window.apiSync && this.currentModule) {
+      window.apiSync.attachToProgressEngine(this.progress, this.currentModule);
+    }
+
     // Render lesson
     const lessonContainer = document.getElementById('lesson-content');
     if (lessonContainer && moduleData) {

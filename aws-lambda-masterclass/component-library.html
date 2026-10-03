@@ -15,8 +15,8 @@
       padding: var(--space-6) var(--space-4);
     }
     .catalog-hero {
-      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-      border: 1px solid #334155;
+      background: linear-gradient(135deg, #27272a 0%, #18181b 100%);
+      border: 1px solid #3f3f46;
       border-radius: var(--radius-xl);
       padding: var(--space-8);
       color: white;
@@ -85,10 +85,10 @@
     }
     .code-tabs {
       margin-top: var(--space-4);
-      background: #0f172a;
+      background: #18181b;
       border-radius: var(--radius-lg);
       padding: var(--space-4);
-      color: #e2e8f0;
+      color: #e4e4e7;
       font-family: var(--font-mono, monospace);
       font-size: 13px;
       position: relative;
@@ -97,7 +97,7 @@
       position: absolute;
       top: 10px;
       right: 10px;
-      background: #334155;
+      background: #3f3f46;
       color: white;
       border: none;
       border-radius: 4px;
@@ -106,7 +106,7 @@
       cursor: pointer;
     }
     .copy-btn:hover {
-      background: #475569;
+      background: #52525b;
     }
   </style>
 </head>
@@ -130,7 +130,7 @@
     <div class="catalog-hero">
       <span class="catalog-badge">1000% Reusable Component Architecture</span>
       <h1 style="margin: 0 0 12px 0; font-size: 32px; font-weight: 800;">MasterclassUI Component Library</h1>
-      <p style="margin: 0; color: #94a3b8; font-size: 16px; max-width: 800px; line-height: 1.6;">
+      <p style="margin: 0; color: #a1a1aa; font-size: 16px; max-width: 800px; line-height: 1.6;">
         Standardized, data-driven interactive UI components designed for cloud architecture, programming sandboxes, technical tutorials, and interactive quizzes. Drop them into any framework or plain HTML.
       </p>
     </div>
@@ -299,7 +299,7 @@ def lambda_handler(event, context):
   </div>
 
   <!-- Component Engine Scripts -->
-  <script src="js/engine/progress-engine.js"></script>
+  <script src="js/shared.js"></script><script src="js/engine/progress-engine.js"></script>
   <script src="js/engine/terminal-engine.js"></script>
   <script src="js/engine/code-editor-engine.js"></script>
   <script src="js/engine/quiz-engine.js"></script>

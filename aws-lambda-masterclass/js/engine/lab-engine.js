@@ -107,7 +107,7 @@ class LabEngine {
     const pct = this.steps.length > 0 ? Math.round((this.completedSteps.size / this.steps.length) * 100) : 0;
     progressDiv.innerHTML = `
       <div class="progress-label">
-        <span class="progress-label-title">Lab Progress</span>
+        <span class="progress-label-title">${MCI18n.t('lab.progress')}</span>
         <span class="progress-label-value">${pct}%</span>
       </div>
       <div class="progress-bar">
@@ -168,7 +168,7 @@ class LabEngine {
           hintsDiv.style.cssText = 'margin-bottom: 12px;';
           const hintBtn = document.createElement('button');
           hintBtn.className = 'btn btn-xs btn-ghost';
-          hintBtn.textContent = '💡 Show Hint';
+          hintBtn.textContent = MCI18n.t('lab.showHint');
           let hintIdx = 0;
           const hintContent = document.createElement('div');
           hintContent.style.cssText = 'display: none; margin-top: 8px; padding: 8px 12px; background: var(--color-warning-50); border-radius: 8px; font-size: 13px; color: var(--color-warning-600);';
@@ -178,7 +178,7 @@ class LabEngine {
               hintContent.style.display = 'block';
               hintContent.textContent = `Hint ${hintIdx + 1}: ${step.hints[hintIdx]}`;
               hintIdx++;
-              if (hintIdx >= step.hints.length) hintBtn.textContent = '(No more hints)';
+              if (hintIdx >= step.hints.length) hintBtn.textContent = MCI18n.t('lab.noMoreHints');
             }
           });
           
@@ -190,7 +190,7 @@ class LabEngine {
         // Complete button
         const completeBtn = document.createElement('button');
         completeBtn.className = 'btn btn-sm btn-success';
-        completeBtn.textContent = step.validation?.message || '✓ Mark Complete';
+        completeBtn.textContent = step.validation?.message || MCI18n.t('lab.markComplete');
         completeBtn.addEventListener('click', () => this.completeStep(step.id));
         stepBody.appendChild(completeBtn);
 
@@ -209,7 +209,7 @@ class LabEngine {
       const cleanup = document.createElement('div');
       cleanup.style.cssText = 'padding: 16px 24px; border-top: 1px solid var(--border-color); background: var(--color-error-50);';
       cleanup.innerHTML = `
-        <div style="font-weight: 600; color: var(--color-error-600); margin-bottom: 8px;">🧹 Cleanup</div>
+        <div style="font-weight: 600; color: var(--color-error-600); margin-bottom: 8px;">${MCI18n.t('lab.cleanup')}</div>
         ${cleanupSteps.map(s => `<div style="font-size: 13px; color: var(--color-error-600); margin-bottom: 4px;">• ${this._escapeHtml(s.cleanup)}</div>`).join('')}
       `;
       wrapper.appendChild(cleanup);
@@ -259,11 +259,7 @@ class LabEngine {
     return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   }
 
-  _escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
+  _escapeHtml(str) { return MCUtils.escapeHtml(str); }
 
   destroy() {
     this.container.innerHTML = '';

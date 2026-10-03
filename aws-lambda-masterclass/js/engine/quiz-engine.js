@@ -36,6 +36,7 @@ class QuizEngine {
     this.title = config.title || 'Knowledge Check';
     this.type = config.type || 'knowledge-check';
     this.onComplete = config.onComplete || null;
+    this.onAnswer = config.onAnswer || null;
     this.showImmediate = config.showImmediate !== false;
     this.shuffleOptions = config.shuffleOptions || false;
     
@@ -78,7 +79,7 @@ class QuizEngine {
         <div class="quiz-type">${this._escapeHtml(this.type.replace('-', ' '))}</div>
         <div class="quiz-question" style="font-size: var(--text-lg);">${this._escapeHtml(this.title)}</div>
         <div style="font-size: var(--text-xs); color: var(--color-neutral-400); margin-top: 4px;">
-          Question ${this.currentIndex + 1} of ${this.questions.length}
+          ${MCI18n.t('quiz.questionOf', { i: this.currentIndex + 1, n: this.questions.length })}
         </div>
       </div>
     `;
@@ -175,7 +176,7 @@ class QuizEngine {
     if (this.showImmediate) {
       const checkBtn = document.createElement('button');
       checkBtn.className = 'btn btn-sm btn-accent';
-      checkBtn.textContent = 'Check Answer';
+      checkBtn.textContent = MCI18n.t('quiz.checkAnswer');
       checkBtn.addEventListener('click', () => this._checkAnswer(q, optionsDiv));
       actionsDiv.appendChild(checkBtn);
     }
@@ -187,7 +188,7 @@ class QuizEngine {
       if (this.currentIndex > 0) {
         const prevBtn = document.createElement('button');
         prevBtn.className = 'btn btn-sm btn-secondary';
-        prevBtn.textContent = '← Previous';
+        prevBtn.textContent = MCI18n.t('quiz.previous');
         prevBtn.addEventListener('click', () => this._goTo(this.currentIndex - 1));
         navDiv.appendChild(prevBtn);
       }
@@ -195,13 +196,13 @@ class QuizEngine {
       if (this.currentIndex < this.questions.length - 1) {
         const nextBtn = document.createElement('button');
         nextBtn.className = 'btn btn-sm btn-primary';
-        nextBtn.textContent = 'Next →';
+        nextBtn.textContent = MCI18n.t('quiz.next');
         nextBtn.addEventListener('click', () => this._goTo(this.currentIndex + 1));
         navDiv.appendChild(nextBtn);
       } else {
         const finishBtn = document.createElement('button');
         finishBtn.className = 'btn btn-sm btn-success';
-        finishBtn.textContent = '✓ Finish Quiz';
+        finishBtn.textContent = MCI18n.t('quiz.finish');
         finishBtn.addEventListener('click', () => this._finish());
         navDiv.appendChild(finishBtn);
       }
@@ -236,6 +237,10 @@ class QuizEngine {
 
     const isCorrect = selectedId === q.correctId;
 
+    if (this.onAnswer) {
+      this.onAnswer(q.id, selectedId, isCorrect);
+    }
+
     // Highlight correct/incorrect
     optionsDiv.querySelectorAll('.quiz-option').forEach(opt => {
       opt.classList.remove('selected');
@@ -253,7 +258,7 @@ class QuizEngine {
     if (resultArea) {
       resultArea.innerHTML = `
         <div class="quiz-result ${isCorrect ? 'quiz-result-correct' : 'quiz-result-incorrect'}">
-          ${isCorrect ? '✅ Correct!' : '❌ Incorrect'}
+          ${isCorrect ? MCI18n.t('quiz.correct') : MCI18n.t('quiz.incorrect')}
         </div>
       `;
     }
@@ -320,7 +325,7 @@ class QuizEngine {
       <div class="quiz-header">
         <div class="quiz-icon">${percentage >= 80 ? '🏆' : percentage >= 60 ? '📊' : '📚'}</div>
         <div>
-          <div class="quiz-type">Quiz Results</div>
+          <div class="quiz-type">${MCI18n.t('quiz.results')}</div>
           <div class="quiz-question" style="font-size: var(--text-xl);">${this._escapeHtml(this.title)}</div>
         </div>
       </div>
@@ -329,7 +334,7 @@ class QuizEngine {
           ${percentage}%
         </div>
         <div style="font-size: 14px; color: var(--color-neutral-500); margin-top: 4px;">
-          ${correct} of ${total} correct
+          ${MCI18n.t('quiz.correctOf', { c: correct, t: total })}
         </div>
         <div style="margin-top: 12px;">
           <div class="progress-bar" style="max-width: 300px; margin: 0 auto;">
@@ -338,8 +343,8 @@ class QuizEngine {
         </div>
       </div>
       <div style="text-align: center;">
-        <button class="btn btn-sm btn-secondary" id="quiz-retry-btn">🔄 Retry</button>
-        <button class="btn btn-sm btn-primary" id="quiz-review-btn" style="margin-left: 8px;">📋 Review Answers</button>
+        <button class="btn btn-sm btn-secondary" id="quiz-retry-btn">${MCI18n.t('quiz.retry')}</button>
+        <button class="btn btn-sm btn-primary" id="quiz-review-btn" style="margin-left: 8px;">${MCI18n.t('quiz.reviewAnswers')}</button>
       </div>
     `;
     this.container.appendChild(summary);
@@ -374,10 +379,10 @@ class QuizEngine {
           <span style="font-weight: 600;">Q${idx + 1}: ${this._escapeHtml(q.question)}</span>
         </div>
         <div style="font-size: 14px; color: var(--color-neutral-600); margin-bottom: 8px;">
-          Your answer: <strong>${this._escapeHtml(q.options.find(o => o.id === this.answers[q.id])?.text || 'No answer')}</strong>
+          ${MCI18n.t('quiz.yourAnswer')}: <strong>${this._escapeHtml(q.options.find(o => o.id === this.answers[q.id])?.text || MCI18n.t('quiz.noAnswer'))}</strong>
         </div>
         ${!isCorrect ? `<div style="font-size: 14px; color: var(--color-success-700); margin-bottom: 8px;">
-          Correct answer: <strong>${this._escapeHtml(q.options.find(o => o.id === q.correctId)?.text || '')}</strong>
+          ${MCI18n.t('quiz.correctAnswer')}: <strong>${this._escapeHtml(q.options.find(o => o.id === q.correctId)?.text || '')}</strong>
         </div>` : ''}
         <div class="quiz-explanation visible">${this._escapeHtml(q.explanation || '')}</div>
       `;
@@ -387,7 +392,7 @@ class QuizEngine {
     // Back button
     const backBtn = document.createElement('button');
     backBtn.className = 'btn btn-sm btn-secondary';
-    backBtn.textContent = '← Back to Results';
+    backBtn.textContent = MCI18n.t('quiz.backToResults');
     backBtn.addEventListener('click', () => this._finish());
     this.container.appendChild(backBtn);
   }
@@ -400,11 +405,7 @@ class QuizEngine {
     return array;
   }
 
-  _escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
+  _escapeHtml(str) { return MCUtils.escapeHtml(str); }
 
   // --- PUBLIC API ---
   getScore() {

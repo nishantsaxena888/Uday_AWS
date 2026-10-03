@@ -187,14 +187,14 @@ class LessonEngine {
     completeBtn.className = 'btn btn-xs btn-ghost';
     completeBtn.style.cssText = 'margin-top: 16px; color: var(--color-neutral-400);';
     const isComplete = this.progress?.isSectionComplete(this.lesson.moduleId, this.lesson.id, section.id);
-    completeBtn.textContent = isComplete ? '✅ Section Complete' : '☐ Mark as Read';
+    completeBtn.textContent = isComplete ? MCI18n.t('lesson.sectionComplete') : MCI18n.t('lesson.markAsRead');
     if (isComplete) {
       completeBtn.style.color = 'var(--color-success-500)';
     }
     completeBtn.addEventListener('click', () => {
       if (this.progress) {
         this.progress.markSectionComplete(this.lesson.moduleId, this.lesson.id, section.id);
-        completeBtn.textContent = '✅ Section Complete';
+        completeBtn.textContent = MCI18n.t('lesson.sectionComplete');
         completeBtn.style.color = 'var(--color-success-500)';
       }
     });
@@ -437,11 +437,7 @@ class LessonEngine {
       }));
   }
 
-  _escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
+  _escapeHtml(str) { return MCUtils.escapeHtml(str); }
 
   destroy() {
     this.activeEngines.forEach(e => e.destroy && e.destroy());

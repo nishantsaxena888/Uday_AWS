@@ -18,6 +18,19 @@ class ProgressEngine {
     this.modules = config.modules || [];
     this.data = this._load();
     this._listeners = [];
+    // Live lesson metadata registered at runtime by app.initModule.
+    // moduleId -> { lessonId, sectionIds: [string] }
+    this.live = {};
+    this._saving = false;
+    this._saveQueued = false;
+  }
+
+  /**
+   * Registers the lesson actually rendered on this page so completion
+   * math uses real section IDs instead of empty registry stubs.
+   */
+  registerLesson(moduleId, lessonId, sectionIds = []) {
+    this.live[moduleId] = { lessonId, sectionIds };
   }
 
   // --- PERSISTENCE ---
@@ -31,11 +44,20 @@ class ProgressEngine {
   }
 
   _save() {
+    if (this._saving) { this._saveQueued = true; return; }
+    this._saving = true;
     try {
+      this._checkAchievements();
       localStorage.setItem(this.storageKey, JSON.stringify(this.data));
       this._notify();
     } catch (e) {
       console.warn('ProgressEngine: localStorage write failed', e);
+    } finally {
+      this._saving = false;
+    }
+    if (this._saveQueued) {
+      this._saveQueued = false;
+      this._save();
     }
   }
 
@@ -142,6 +164,17 @@ class ProgressEngine {
   getModuleProgress(moduleId) {
     const mod = this.data.modules[moduleId];
     if (!mod) return 0;
+    if (mod.complete) return 100;
+
+    // Prefer live-registered lesson sections (real denominator).
+    const live = this.live[moduleId];
+    if (live && live.sectionIds.length) {
+      const lesson = mod.lessons?.[live.lessonId];
+      if (!lesson) return 0;
+      const done = (lesson.sections || []).filter(s => live.sectionIds.includes(s)).length;
+      return Math.round((done / live.sectionIds.length) * 100);
+    }
+
     const moduleDef = this.modules.find(m => m.id === moduleId);
     if (!moduleDef || !moduleDef.lessons || moduleDef.lessons.length === 0) return 0;
     const completed = Object.values(mod.lessons).filter(l => l.complete).length;
@@ -150,15 +183,8 @@ class ProgressEngine {
 
   getOverallProgress() {
     if (this.modules.length === 0) return 0;
-    const total = this.modules.reduce((sum, m) => sum + (m.lessons ? m.lessons.length : 0), 0);
-    if (total === 0) return 0;
-    let completed = 0;
-    this.modules.forEach(mod => {
-      if (this.data.modules[mod.id]) {
-        completed += Object.values(this.data.modules[mod.id].lessons).filter(l => l.complete).length;
-      }
-    });
-    return Math.round((completed / total) * 100);
+    const total = this.modules.reduce((sum, m) => sum + this.getModuleProgress(m.id), 0);
+    return Math.round(total / this.modules.length);
   }
 
   isLessonComplete(moduleId, lessonId) {
@@ -225,20 +251,40 @@ class ProgressEngine {
   }
 
   _updateLessonCompletion(moduleId, lessonId) {
-    const moduleDef = this.modules.find(m => m.id === moduleId);
-    if (!moduleDef) return;
-    const lessonDef = moduleDef.lessons?.find(l => l.id === lessonId);
-    if (!lessonDef || !lessonDef.sections) return;
+    // Determine the declared section list: live registration first,
+    // then registry lesson def. Skip auto-completion when nothing is
+    // declared — an empty list would make [].every() vacuously true.
+    const live = this.live[moduleId];
+    let declared = null;
+    if (live && live.lessonId === lessonId && live.sectionIds.length) {
+      declared = live.sectionIds;
+    } else {
+      const moduleDef = this.modules.find(m => m.id === moduleId);
+      const lessonDef = moduleDef?.lessons?.find(l => l.id === lessonId);
+      if (!lessonDef || !lessonDef.sections || !lessonDef.sections.length) return;
+      declared = lessonDef.sections.map(s => s.id || s);
+    }
+
     const completed = this.data.modules[moduleId].lessons[lessonId].sections;
-    if (lessonDef.sections.every(s => completed.includes(s.id || s))) {
+    if (declared.every(s => completed.includes(s))) {
       this.data.modules[moduleId].lessons[lessonId].complete = true;
       this.data.modules[moduleId].lessons[lessonId].completedAt = new Date().toISOString();
     }
   }
 
   _updateModuleCompletion(moduleId) {
+    if (this.data.modules[moduleId].complete) return;
+
+    // Live lesson fully done -> module done (one lesson per module page).
+    const live = this.live[moduleId];
+    if (live && this.data.modules[moduleId].lessons?.[live.lessonId]?.complete) {
+      this.data.modules[moduleId].complete = true;
+      this.data.modules[moduleId].completedAt = new Date().toISOString();
+      return;
+    }
+
     const moduleDef = this.modules.find(m => m.id === moduleId);
-    if (!moduleDef || !moduleDef.lessons) return;
+    if (!moduleDef || !moduleDef.lessons || !moduleDef.lessons.length) return;
     const allComplete = moduleDef.lessons.every(l =>
       this.data.modules[moduleId]?.lessons?.[l.id]?.complete
     );
@@ -246,6 +292,30 @@ class ProgressEngine {
       this.data.modules[moduleId].complete = true;
       this.data.modules[moduleId].completedAt = new Date().toISOString();
     }
+  }
+
+  // --- ACHIEVEMENT RULES ---
+  _checkAchievements() {
+    const d = this.data;
+    const modulesCompleted = Object.values(d.modules).filter(m => m.complete).length;
+    const sectionsCompleted = Object.values(d.modules).reduce(
+      (n, m) => n + Object.values(m.lessons || {}).reduce(
+        (x, l) => x + ((l.sections || []).length), 0
+      ), 0
+    );
+
+    if (sectionsCompleted >= 1) this.grantAchievement('first-steps');
+    if (modulesCompleted >= 1) this.grantAchievement('module-finisher');
+    if (modulesCompleted >= 5) this.grantAchievement('five-modules');
+    if (this.modules.length && modulesCompleted >= Math.ceil(this.modules.length / 2)) {
+      this.grantAchievement('half-journey');
+    }
+    if (d.labsCompleted >= 1) this.grantAchievement('hands-on');
+    if (d.commandsExecuted >= 10) this.grantAchievement('cli-warrior');
+    if (Object.values(d.quizScores).some(q => q.percentage === 100)) {
+      this.grantAchievement('quiz-ace');
+    }
+    if (this.getOverallProgress() >= 90) this.grantAchievement('production-architect');
   }
 
   _checkMastery() {

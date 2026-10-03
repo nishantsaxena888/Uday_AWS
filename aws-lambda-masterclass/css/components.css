@@ -33,7 +33,7 @@
 
 .btn-primary {
   background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-600));
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
   box-shadow: var(--shadow-sm), 0 0 0 0 rgba(249,115,22,0);
 }
 .btn-primary:hover {
@@ -54,7 +54,7 @@
 
 .btn-accent {
   background: linear-gradient(135deg, var(--color-accent-500), var(--color-accent-600));
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
 }
 .btn-accent:hover {
   box-shadow: var(--shadow-md), var(--shadow-glow-accent);
@@ -62,7 +62,7 @@
 
 .btn-success {
   background: var(--color-success-500);
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
 }
 .btn-success:hover {
   background: var(--color-success-600);
@@ -70,7 +70,7 @@
 
 .btn-danger {
   background: var(--color-error-500);
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
 }
 .btn-danger:hover { background: var(--color-error-600); }
 
@@ -401,7 +401,7 @@
   transform: translateX(-50%);
   padding: var(--space-2) var(--space-3);
   background: var(--color-neutral-900);
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
   font-size: var(--text-xs);
   border-radius: var(--radius-md);
   white-space: nowrap;
@@ -716,15 +716,15 @@
 }
 .quiz-option.selected .quiz-option-letter {
   background: var(--color-accent-500);
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
 }
 .quiz-option.correct .quiz-option-letter {
   background: var(--color-success-500);
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
 }
 .quiz-option.incorrect .quiz-option-letter {
   background: var(--color-error-500);
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
 }
 
 .quiz-explanation {
@@ -802,12 +802,12 @@
 }
 .step-circle-active {
   background: var(--color-primary-500);
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
   box-shadow: 0 0 0 4px var(--color-primary-100);
 }
 .step-circle-complete {
   background: var(--color-success-500);
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
 }
 .step-line {
   width: 2px;
@@ -1065,7 +1065,7 @@
   gap: var(--space-4);
   padding: var(--space-2) var(--space-4);
   background: #232f3e;
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
   font-size: var(--text-sm);
 }
 .console-navbar-logo {

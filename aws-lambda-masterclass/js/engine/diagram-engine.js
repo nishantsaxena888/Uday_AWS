@@ -41,7 +41,7 @@ class DiagramEngine {
       titleBar.innerHTML = `
         <span style="font-size: 18px;">📐</span>
         <span style="font-weight: 600; font-size: 14px; color: var(--color-neutral-700);">${this._escapeHtml(this.title)}</span>
-        <span style="font-size: 12px; color: var(--color-neutral-400); margin-left: auto;">Click components to inspect</span>
+        <span style="font-size: 12px; color: var(--color-neutral-400); margin-left: auto;">${MCI18n.t('diagram.clickToInspect')}</span>
       `;
       wrapper.appendChild(titleBar);
     }
@@ -60,7 +60,7 @@ class DiagramEngine {
     const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
     defs.innerHTML = `
       <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-        <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+        <polygon points="0 0, 10 3.5, 0 7" fill="#a1a1aa" />
       </marker>
       <marker id="arrowhead-active" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
         <polygon points="0 0, 10 3.5, 0 7" fill="#f97316" />
@@ -88,7 +88,7 @@ class DiagramEngine {
       line.setAttribute('y1', y1);
       line.setAttribute('x2', x2);
       line.setAttribute('y2', y2);
-      line.setAttribute('stroke', '#cbd5e1');
+      line.setAttribute('stroke', '#d4d4d8');
       line.setAttribute('stroke-width', '2');
       line.setAttribute('marker-end', 'url(#arrowhead)');
       if (edge.animated) {
@@ -105,7 +105,7 @@ class DiagramEngine {
         text.setAttribute('x', midX);
         text.setAttribute('y', midY);
         text.setAttribute('text-anchor', 'middle');
-        text.setAttribute('fill', '#94a3b8');
+        text.setAttribute('fill', '#a1a1aa');
         text.setAttribute('font-size', '11');
         text.setAttribute('font-family', 'Inter, sans-serif');
         text.textContent = edge.label;
@@ -126,7 +126,7 @@ class DiagramEngine {
         'storage': { bg: '#dbeafe', border: '#3b82f6', text: '#1e40af' },
         'event': { bg: '#d1fae5', border: '#10b981', text: '#065f46' },
         'output': { bg: '#e0e7ff', border: '#6366f1', text: '#3730a3' },
-        'client': { bg: '#f1f5f9', border: '#64748b', text: '#334155' },
+        'client': { bg: '#f4f4f5', border: '#71717a', text: '#3f3f46' },
         'monitoring': { bg: '#fce7f3', border: '#ec4899', text: '#9d174d' },
         'security': { bg: '#fee2e2', border: '#ef4444', text: '#991b1b' }
       };
@@ -227,11 +227,7 @@ class DiagramEngine {
     }
   }
 
-  _escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
+  _escapeHtml(str) { return MCUtils.escapeHtml(str); }
 
   destroy() {
     this.container.innerHTML = '';

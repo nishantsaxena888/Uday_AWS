@@ -1060,6 +1060,14 @@ const COURSE_REGISTRY = {
   ],
 
   achievements: [
+    { id: 'first-steps', icon: '👣', title: 'First Steps', description: 'Complete your first lesson section.' },
+    { id: 'module-finisher', icon: '🏁', title: 'Module Finisher', description: 'Complete an entire module end-to-end.' },
+    { id: 'five-modules', icon: '📚', title: 'Bookworm', description: 'Complete 5 different modules.' },
+    { id: 'half-journey', icon: '🗺️', title: 'Halfway There', description: 'Complete at least half of all modules.' },
+    { id: 'hands-on', icon: '🔬', title: 'Hands-On Learner', description: 'Finish your first interactive lab.' },
+    { id: 'cli-warrior', icon: '⌨️', title: 'CLI Warrior', description: 'Execute 10 commands in the simulated terminal.' },
+    { id: 'quiz-ace', icon: '🧠', title: 'Quiz Ace', description: 'Score 100% on any knowledge check.' },
+    { id: 'production-architect', icon: '🏆', title: 'Production Architect', description: 'Reach 90% overall course progress.' }
   ]
 };
 

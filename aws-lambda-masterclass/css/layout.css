@@ -25,7 +25,7 @@
   justify-content: space-between;
   padding: 0 var(--space-6);
   background: var(--color-neutral-900);
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
   z-index: var(--z-fixed);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
@@ -82,7 +82,7 @@
   display: none;
   background: none;
   border: none;
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
   font-size: var(--text-xl);
   cursor: pointer;
   padding: var(--space-1);
@@ -167,11 +167,11 @@
 }
 .sidebar-nav-link .nav-badge-complete {
   background: var(--color-success-500);
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
 }
 .sidebar-nav-link .nav-badge-progress {
   background: var(--color-primary-500);
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
 }
 
 /* Sub-navigation (lessons within a module) */
@@ -221,7 +221,7 @@
 .sidebar-subnav-link .check.done {
   background: var(--color-success-500);
   border-color: var(--color-success-500);
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
 }
 
 /* Sidebar footer */
@@ -380,8 +380,8 @@
   position: relative;
   padding: var(--space-20) var(--space-6);
   text-align: center;
-  background: linear-gradient(135deg, var(--color-neutral-900) 0%, #1a1a3e 50%, var(--color-neutral-950) 100%);
-  color: var(--color-neutral-0);
+  background: linear-gradient(135deg, var(--color-neutral-900) 0%, var(--color-neutral-950) 100%);
+  color: var(--text-on-accent);
   overflow: hidden;
 }
 .hero::before {
@@ -417,7 +417,7 @@
 .hero h1 {
   font-size: var(--text-5xl);
   font-weight: var(--weight-black);
-  color: var(--color-neutral-0);
+  color: var(--text-on-accent);
   margin-bottom: var(--space-5);
   letter-spacing: -0.03em;
   line-height: 1.1;

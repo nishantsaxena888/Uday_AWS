@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.env
+
+# Node
+node_modules/
+
+# Data / local state
+data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+labs/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

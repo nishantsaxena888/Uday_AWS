@@ -10,6 +10,7 @@ from .routes.courses import router as courses_router
 from .routes.progress import router as progress_router
 from .routes.quizzes import router as quizzes_router
 from .routes.sandbox import router as sandbox_router
+from .routes.labs import router as labs_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -32,7 +33,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -43,6 +44,7 @@ app.include_router(courses_router)
 app.include_router(progress_router)
 app.include_router(quizzes_router)
 app.include_router(sandbox_router)
+app.include_router(labs_router)
 
 # Frontend directories
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

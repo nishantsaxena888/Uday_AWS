@@ -299,11 +299,7 @@ class CodeEditorEngine {
     panel.style.display = 'block';
   }
 
-  _escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
+  _escapeHtml(str) { return MCUtils.escapeHtml(str); }
 
   // --- PUBLIC API ---
 

@@ -72,7 +72,7 @@ class TerminalEngine {
     this.input.className = 'terminal-input';
     this.input.setAttribute('autocomplete', 'off');
     this.input.setAttribute('spellcheck', 'false');
-    this.input.placeholder = 'Type a command...';
+    this.input.placeholder = MCI18n.t('terminal.typeCommand');
     this.inputLine.appendChild(this.input);
     this.body.appendChild(this.inputLine);
 
@@ -169,7 +169,7 @@ class TerminalEngine {
         return;
       } else {
         response = {
-          text: `bash: ${cmd.split(' ')[0]}: command not found\n\nAvailable commands in this lab: type 'help' for a list.`,
+          text: `bash: ${cmd.split(' ')[0]}: ${MCI18n.t('terminal.commandNotFound')}\n\n${MCI18n.t('terminal.availableCommands')}: ${MCI18n.t('terminal.helpHint')}.`,
           type: 'error'
         };
       }
@@ -226,18 +226,14 @@ class TerminalEngine {
       .filter(k => !k.startsWith('/'))
       .map(k => `  ${k}`)
       .join('\n');
-    this._addOutput(`Available commands:\n${cmds}\n\nSpecial:\n  clear    - Clear terminal\n  help     - Show this help`, 'info');
+    this._addOutput(`${MCI18n.t('terminal.availableCommands')}:\n${cmds}\n\nSpecial:\n  clear    - Clear terminal\n  help     - Show this help`, 'info');
   }
 
   _scrollToBottom() {
     this.body.scrollTop = this.body.scrollHeight;
   }
 
-  _escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
+  _escapeHtml(str) { return MCUtils.escapeHtml(str); }
 
   // --- PUBLIC API ---
 

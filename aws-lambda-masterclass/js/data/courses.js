@@ -1056,6 +1056,47 @@ const COURSE_REGISTRY = {
         { id: 'cost-lab', title: 'Hands-on Cost Optimization Lab', sections: [] },
         { id: 'quiz-cost', title: 'Knowledge Check', sections: [] }
       ]
+    },
+    {
+      id: 'module-48',
+      number: '48',
+      title: 'Linux Command Line for Beginners — Foundations',
+      description: 'Shell essentials every AWS lab assumes: navigation, files, permissions, pipes, and processes — with a simulated terminal to practice safely.',
+      productionStory: 'SSH into any EC2 instance and these commands are your entire toolbox. The CLI is the craft; the console is the convenience.',
+      icon: '🐧',
+      difficulty: 'beginner',
+      duration: '60 min',
+      color: '#eab308',
+      colorBg: '#fefce8',
+      href: 'modules/module-48.html',
+      dataFile: 'module-48-linux',
+      tags: ['Linux', 'CLI', 'Bash', 'Shell', 'Foundations'],
+      lessons: [
+        { id: 'linux-cli-fundamentals', title: 'Linux CLI Fundamentals', sections: [] }
+      ]
+    },
+    {
+      id: 'module-49',
+      number: '49',
+      title: 'Forward Deployed Engineer (FDE) — Senior SWE to Enterprise AI',
+      description: 'Transition from Senior Software Engineer to Forward Deployed Engineer (FDE) for top AI labs. Learn how to architect agentic workflows, MCP servers, enterprise RAG, and production eval pipelines.',
+      productionStory: 'Top AI labs pay a premium for FDEs who can embed directly with enterprise customers to turn raw LLM prototypes into production-grade, secure agentic systems.',
+      icon: '🤖',
+      difficulty: 'advanced',
+      duration: '2.5 hours',
+      color: '#8b5cf6',
+      colorBg: '#f5f3ff',
+      href: 'modules/module-49.html',
+      dataFile: 'module-49-fde',
+      tags: ['FDE', 'Applied AI', 'GenAI', 'Agentic Workflows', 'MCP', 'Enterprise RAG'],
+      videoUrl: 'https://www.facebook.com/share/v/19hUGE3sWY/',
+      lessons: [
+        { id: 'fde-overview', title: 'The FDE Role & Transition Strategy', sections: [] },
+        { id: 'agentic-systems', title: 'Agentic Workflows & Multi-Agent Architecture', sections: [] },
+        { id: 'mcp-integration', title: 'Model Context Protocol (MCP) & Enterprise Connectors', sections: [] },
+        { id: 'eval-production', title: 'Evaluation Pipelines & Production Hardening', sections: [] },
+        { id: 'fde-interview-prep', title: 'FDE Interview Strategy & Case Studies', sections: [] }
+      ]
     }
   ],
 
@@ -1066,6 +1107,7 @@ const COURSE_REGISTRY = {
     { id: 'half-journey', icon: '🗺️', title: 'Halfway There', description: 'Complete at least half of all modules.' },
     { id: 'hands-on', icon: '🔬', title: 'Hands-On Learner', description: 'Finish your first interactive lab.' },
     { id: 'cli-warrior', icon: '⌨️', title: 'CLI Warrior', description: 'Execute 10 commands in the simulated terminal.' },
+    { id: 'fde-architect', icon: '🤖', title: 'Forward Deployed Hero', description: 'Complete the Forward Deployed Engineer (FDE) enterprise AI module.' },
     { id: 'quiz-ace', icon: '🧠', title: 'Quiz Ace', description: 'Score 100% on any knowledge check.' },
     { id: 'production-architect', icon: '🏆', title: 'Production Architect', description: 'Reach 90% overall course progress.' }
   ]

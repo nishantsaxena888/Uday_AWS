@@ -240,7 +240,9 @@
     'module-44': 'Chapter_44_Amazon_Inspector.md',
     'module-45': 'Chapter_45_AWS_Security_Hub.md',
     'module-46': 'Chapter_46_AWS_Resource_Access_Manager.md',
-    'module-47': 'Chapter_47_AWS_Cost_Explorer_and_Budgets.md'
+    'module-47': 'Chapter_47_AWS_Cost_Explorer_and_Budgets.md',
+    'module-48': 'Chapter_48_Linux_Command_Line.md',
+    'module-49': 'Chapter_49_Forward_Deployed_Engineer_FDE.md'
   };
 
   const MCChapters = {

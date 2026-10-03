@@ -176,6 +176,9 @@ class LessonEngine {
       case 'next':
         this._renderNextSection(bodyEl, section);
         break;
+      case 'video':
+        this._renderVideoSection(bodyEl, section);
+        break;
       default:
         this._renderTextSection(bodyEl, section);
     }
@@ -211,6 +214,58 @@ class LessonEngine {
     div.style.cssText = 'font-size: 15px; line-height: 1.8; color: var(--color-neutral-700);';
     div.innerHTML = section.content?.html || section.content || '';
     el.appendChild(div);
+  }
+
+  _renderVideoSection(el, section) {
+    const c = section.content || {};
+    // Accept videoId, a watch URL, or a full /embed/ URL for YouTube
+    const ytId = c.videoId
+      || (c.url || '').match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([\w-]{6,})/)?.[1];
+    
+    const wrap = document.createElement('div');
+    if (ytId) {
+      wrap.style.cssText = 'position:relative;padding-top:56.25%;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-color);background:var(--color-neutral-900);';
+      wrap.innerHTML = `<iframe src="https://www.youtube.com/embed/${MCUtils.escapeHtml(ytId)}" title="${MCUtils.escapeHtml(c.title || 'Video')}" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
+    } else if (c.url && c.url.match(/(?:vimeo\.com\/)([\d]+)/)) {
+      const vimeoId = c.url.match(/vimeo\.com\/(\d+)/)[1];
+      wrap.style.cssText = 'position:relative;padding-top:56.25%;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-color);background:var(--color-neutral-900);';
+      wrap.innerHTML = `<iframe src="https://player.vimeo.com/video/${vimeoId}" title="${MCUtils.escapeHtml(c.title || 'Video')}" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allowfullscreen loading="lazy"></iframe>`;
+    } else if (c.url && (c.url.includes('facebook.com') || c.url.includes('fb.watch'))) {
+      const fbTargetUrl = c.canonicalUrl || c.url;
+      const encodedFbUrl = encodeURIComponent(fbTargetUrl);
+      wrap.style.cssText = 'border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-color);background:linear-gradient(135deg, #18191a, #242526);padding:24px;text-align:center;color:#fff;box-shadow:var(--shadow-md);';
+      wrap.innerHTML = `
+        <div style="max-width:700px;margin:0 auto;">
+          <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(24,119,242,0.15);border:1px solid rgba(24,119,242,0.3);border-radius:20px;color:#75b6ff;font-size:12px;font-weight:600;margin-bottom:12px;">
+            <span>🎥 FEATURED FDE MASTERCLASS</span>
+          </div>
+          <h3 style="color:#ffffff;margin-bottom:8px;font-size:18px;font-weight:700;">${MCUtils.escapeHtml(c.title || 'Forward Deployed Engineer (FDE) Video')}</h3>
+          <p style="color:var(--color-neutral-400);font-size:14px;line-height:1.5;margin-bottom:20px;">${MCUtils.escapeHtml(c.caption || 'Watch the comprehensive transition masterclass and interview prep breakdown.')}</p>
+          <div style="position:relative;padding-top:56.25%;margin-bottom:20px;border-radius:10px;overflow:hidden;background:#000;border:1px solid rgba(255,255,255,0.1);">
+            <iframe src="https://www.facebook.com/plugins/video.php?href=${encodedFbUrl}&show_text=false&width=560" style="position:absolute;inset:0;width:100%;height:100%;border:0;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          </div>
+          <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+            <a href="${MCUtils.escapeHtml(c.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;padding:10px 22px;background:#1877f2;border-color:#1877f2;text-decoration:none;border-radius:8px;">
+              <span>Watch Original Video</span> ↗
+            </a>
+          </div>
+        </div>
+      `;
+    } else if (c.url) {
+      wrap.style.cssText = 'border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-color);padding:20px;background:var(--color-neutral-100);';
+      wrap.innerHTML = `<a href="${MCUtils.escapeHtml(c.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Watch: ${MCUtils.escapeHtml(c.title || 'Video Resource')} ↗</a>`;
+    } else {
+      wrap.style.padding = '16px';
+      wrap.style.color = 'var(--color-neutral-400)';
+      wrap.innerHTML = 'Video unavailable.';
+    }
+    el.appendChild(wrap);
+    if (c.caption && (!c.url || (!c.url.includes('facebook.com') && !c.url.includes('fb.watch')))) {
+      const cap = document.createElement('div');
+      cap.style.cssText = 'margin-top:8px;font-size:13px;color:var(--color-neutral-500);';
+      cap.textContent = c.caption;
+      el.appendChild(cap);
+    }
   }
 
   _renderArchitectureSection(el, section) {

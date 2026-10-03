@@ -110,6 +110,11 @@ inverts the neutral ramp + semantic tints. White text on colored surfaces uses
   update title + script src + `app.currentModule`), add registry entry in
   `courses.js`, add `MCChapters.MD_MAP` entry in `js/shared.js` (ONE place
   now), copy `Chapter_XX_*.md` into `aws-lambda-masterclass/chapters/`.
+- **Screenshot images**: chapter markdown references `image-N.png`; `<img>`
+  srcs resolve relative to the *page* URL (`/modules/module-XX.html`), so new
+  images MUST land in `aws-lambda-masterclass/modules/` — copies at repo root
+  or app root don't render. (Duplicated copies exist; the modules/ one is
+  the load-bearing one.)
 - **Adding a section**: append a `{id, type, title, content}` object to
   `MODULE_XX_DATA.sections`; follow the per-type content shape documented in
   each engine's constructor JSDoc.

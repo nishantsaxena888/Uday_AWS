@@ -1,0 +1,2908 @@
+{
+  "categories": [
+    {
+      "id": "aws-agentcore",
+      "title": "AWS AgentCore — Complete Series",
+      "icon": "☁️",
+      "subtitle": "All 12 AWS Show & Tell episodes — Introduction, every episode, Summary Notes",
+      "contentBase": "/agentcore-playlist/",
+      "courses": [
+        {
+          "id": "introduction",
+          "title": "Introduction & Series Map",
+          "icon": "🧭",
+          "description": "Welcome — the 12-episode map, the AgentCore pillars and learning paths.",
+          "contentBase": "/agentcore-playlist/",
+          "chapters": [
+            {
+              "id": "Chapter_00_Welcome_and_Series_Map",
+              "title": "00 — Welcome And Series Map",
+              "file": "Chapter_00_Welcome_and_Series_Map.md",
+              "sectionCount": 8
+            }
+          ]
+        },
+        {
+          "id": "ep01-production-agent",
+          "title": "EP 01 — Production-Ready AI Agent",
+          "icon": "🛡️",
+          "description": "The prototype→production gap and a tour of every AgentCore pillar.",
+          "contentBase": "/agentcore-production-agent/",
+          "chapters": [
+            {
+              "id": "Chapter_01_Prototype_to_Production_Gap",
+              "title": "01 — Prototype To Production Gap",
+              "file": "Chapter_01_Prototype_to_Production_Gap.md",
+              "sectionCount": 9
+            },
+            {
+              "id": "Chapter_02_Runtime_Local_to_Cloud",
+              "title": "02 — Runtime Local To Cloud",
+              "file": "Chapter_02_Runtime_Local_to_Cloud.md",
+              "sectionCount": 10
+            },
+            {
+              "id": "Chapter_03_Gateway_Tools_as_MCP",
+              "title": "03 — Gateway Tools As MCP",
+              "file": "Chapter_03_Gateway_Tools_as_MCP.md",
+              "sectionCount": 10
+            },
+            {
+              "id": "Chapter_04_Memory_Identity_Observability",
+              "title": "04 — Memory Identity Observability",
+              "file": "Chapter_04_Memory_Identity_Observability.md",
+              "sectionCount": 10
+            }
+          ]
+        },
+        {
+          "id": "ep02-strands-agents",
+          "title": "EP 02 — Build an Agentic App (Strands)",
+          "icon": "🧬",
+          "description": "Strands Agents SDK, tools, MCP wiring and multi-agent orchestration.",
+          "contentBase": "/strands-agents/",
+          "chapters": [
+            {
+              "id": "Chapter_01_Why_Strands_Agents",
+              "title": "01 — Why Strands Agents",
+              "file": "Chapter_01_Why_Strands_Agents.md",
+              "sectionCount": 10
+            },
+            {
+              "id": "Chapter_02_Strands_SDK_and_the_App_Blueprint",
+              "title": "02 — Strands SDK And The App Blueprint",
+              "file": "Chapter_02_Strands_SDK_and_the_App_Blueprint.md",
+              "sectionCount": 9
+            },
+            {
+              "id": "Chapter_03_Agents_Tools_and_MCP_Hands_On",
+              "title": "03 — Agents Tools And MCP Hands On",
+              "file": "Chapter_03_Agents_Tools_and_MCP_Hands_On.md",
+              "sectionCount": 10
+            },
+            {
+              "id": "Chapter_04_Multi_Agent_Orchestration",
+              "title": "04 — Multi Agent Orchestration",
+              "file": "Chapter_04_Multi_Agent_Orchestration.md",
+              "sectionCount": 11
+            }
+          ]
+        },
+        {
+          "id": "ep03-runtime-deep-dive",
+          "title": "EP 03 — Runtime Deep Dive",
+          "icon": "🚀",
+          "description": "agentcore configure/launch/invoke, session isolation, streaming, MCP on Runtime.",
+          "contentBase": "/bedrock-deepti/",
+          "chapters": [
+            {
+              "id": "Chapter_04_AgentCore_Runtime_Prototype_to_Production",
+              "title": "04 — AgentCore Runtime Prototype To Production",
+              "file": "Chapter_04_AgentCore_Runtime_Prototype_to_Production.md",
+              "sectionCount": 24
+            }
+          ]
+        },
+        {
+          "id": "ep04-gateway-deep-dive",
+          "title": "EP 04 — Gateway Deep Dive",
+          "icon": "🌉",
+          "description": "Lambdas and OpenAPI services as MCP tools — auth, tool search, live wiring.",
+          "contentBase": "/bedrock-deepti/",
+          "chapters": [
+            {
+              "id": "Chapter_05_AgentCore_Gateway_Connecting_Agents_to_Tools",
+              "title": "05 — AgentCore Gateway Connecting Agents To Tools",
+              "file": "Chapter_05_AgentCore_Gateway_Connecting_Agents_to_Tools.md",
+              "sectionCount": 20
+            }
+          ]
+        },
+        {
+          "id": "ep05-secure-workflows",
+          "title": "EP 05 — Secure Agent Workflows",
+          "icon": "🔐",
+          "description": "Inbound vs outbound identity, token vault, OAuth credential providers.",
+          "contentBase": "/agentcore-security/",
+          "chapters": [
+            {
+              "id": "Chapter_01_Agent_Identity_Model",
+              "title": "01 — Agent Identity Model",
+              "file": "Chapter_01_Agent_Identity_Model.md",
+              "sectionCount": 9
+            },
+            {
+              "id": "Chapter_02_Credential_Providers_and_OAuth",
+              "title": "02 — Credential Providers And OAuth",
+              "file": "Chapter_02_Credential_Providers_and_OAuth.md",
+              "sectionCount": 9
+            },
+            {
+              "id": "Chapter_03_Gateway_and_Identity",
+              "title": "03 — Gateway And Identity",
+              "file": "Chapter_03_Gateway_and_Identity.md",
+              "sectionCount": 9
+            }
+          ]
+        },
+        {
+          "id": "ep06-built-in-tools",
+          "title": "EP 06 — Built-in Tools",
+          "icon": "🧰",
+          "description": "Managed Browser Tool (headless Chromium/CDP) and sandboxed Code Interpreter.",
+          "contentBase": "/agentcore-tools/",
+          "chapters": [
+            {
+              "id": "Chapter_01_Browser_Tool",
+              "title": "01 — Browser Tool",
+              "file": "Chapter_01_Browser_Tool.md",
+              "sectionCount": 9
+            },
+            {
+              "id": "Chapter_02_Code_Interpreter",
+              "title": "02 — Code Interpreter",
+              "file": "Chapter_02_Code_Interpreter.md",
+              "sectionCount": 9
+            },
+            {
+              "id": "Chapter_03_Composition_and_Production",
+              "title": "03 — Composition And Production",
+              "file": "Chapter_03_Composition_and_Production.md",
+              "sectionCount": 8
+            }
+          ]
+        },
+        {
+          "id": "ep07-memory-deep-dive",
+          "title": "EP 07 — Memory Deep Dive",
+          "icon": "🧠",
+          "description": "Short-term vs long-term memory, strategies, namespaces and hooks.",
+          "contentBase": "/agentcore-memory/",
+          "chapters": [
+            {
+              "id": "Chapter_01_STM_vs_LTM",
+              "title": "01 — STM Vs LTM",
+              "file": "Chapter_01_STM_vs_LTM.md",
+              "sectionCount": 9
+            },
+            {
+              "id": "Chapter_02_Strategies_and_Namespaces",
+              "title": "02 — Strategies And Namespaces",
+              "file": "Chapter_02_Strategies_and_Namespaces.md",
+              "sectionCount": 8
+            },
+            {
+              "id": "Chapter_03_Hooks_and_Demo",
+              "title": "03 — Hooks And Demo",
+              "file": "Chapter_03_Hooks_and_Demo.md",
+              "sectionCount": 9
+            }
+          ]
+        },
+        {
+          "id": "ep08-prototype-to-production",
+          "title": "EP 08 — Prototype to Production",
+          "icon": "🏭",
+          "description": "CI/CD for agents — CodeBuild→ECR→Runtime and the full deployment lifecycle.",
+          "contentBase": "/agentcore-prod-deploy/",
+          "chapters": [
+            {
+              "id": "Chapter_01_Production_Lifecycle",
+              "title": "01 — Production Lifecycle",
+              "file": "Chapter_01_Production_Lifecycle.md",
+              "sectionCount": 9
+            },
+            {
+              "id": "Chapter_02_MCP_on_Runtime",
+              "title": "02 — MCP On Runtime",
+              "file": "Chapter_02_MCP_on_Runtime.md",
+              "sectionCount": 8
+            },
+            {
+              "id": "Chapter_03_End_to_End_Walkthrough",
+              "title": "03 — End To End Walkthrough",
+              "file": "Chapter_03_End_to_End_Walkthrough.md",
+              "sectionCount": 8
+            }
+          ]
+        },
+        {
+          "id": "ep09-observability",
+          "title": "EP 09 — Observability",
+          "icon": "📡",
+          "description": "OpenTelemetry spans/traces, CloudWatch GenAI dashboard, third-party APM.",
+          "contentBase": "/agentcore-observability/",
+          "chapters": [
+            {
+              "id": "Chapter_01_OTel_Spans_Traces",
+              "title": "01 — OTel Spans Traces",
+              "file": "Chapter_01_OTel_Spans_Traces.md",
+              "sectionCount": 9
+            },
+            {
+              "id": "Chapter_02_CloudWatch_GenAI_Dashboard",
+              "title": "02 — CloudWatch GenAI Dashboard",
+              "file": "Chapter_02_CloudWatch_GenAI_Dashboard.md",
+              "sectionCount": 8
+            },
+            {
+              "id": "Chapter_03_Third_Party_APM",
+              "title": "03 — Third Party APM",
+              "file": "Chapter_03_Third_Party_APM.md",
+              "sectionCount": 8
+            }
+          ]
+        },
+        {
+          "id": "ep10-evaluations",
+          "title": "EP 10 — Evaluations",
+          "icon": "✅",
+          "description": "Judges, on-demand vs continuous evaluation, score dashboards.",
+          "contentBase": "/agentcore-evaluations/",
+          "chapters": [
+            {
+              "id": "Chapter_01_Evaluation_Concepts",
+              "title": "01 — Evaluation Concepts",
+              "file": "Chapter_01_Evaluation_Concepts.md",
+              "sectionCount": 9
+            },
+            {
+              "id": "Chapter_02_OnDemand_Evals_Config",
+              "title": "02 — OnDemand Evals Config",
+              "file": "Chapter_02_OnDemand_Evals_Config.md",
+              "sectionCount": 9
+            },
+            {
+              "id": "Chapter_03_Dashboards_and_Judges",
+              "title": "03 — Dashboards And Judges",
+              "file": "Chapter_03_Dashboards_and_Judges.md",
+              "sectionCount": 8
+            }
+          ]
+        },
+        {
+          "id": "ep11-tool-controls",
+          "title": "EP 11 — Policy & Tool Controls",
+          "icon": "🌲",
+          "description": "Cedar policies on Gateway — argument-level authorization and audit.",
+          "contentBase": "/agentcore-tool-controls/",
+          "chapters": [
+            {
+              "id": "Chapter_01_Agent_Tool_Risks",
+              "title": "01 — Agent Tool Risks",
+              "file": "Chapter_01_Agent_Tool_Risks.md",
+              "sectionCount": 9
+            },
+            {
+              "id": "Chapter_02_Cedar_Policies_on_Gateway",
+              "title": "02 — Cedar Policies On Gateway",
+              "file": "Chapter_02_Cedar_Policies_on_Gateway.md",
+              "sectionCount": 9
+            },
+            {
+              "id": "Chapter_03_Policy_Author_and_Enforcement",
+              "title": "03 — Policy Author And Enforcement",
+              "file": "Chapter_03_Policy_Author_and_Enforcement.md",
+              "sectionCount": 8
+            }
+          ]
+        },
+        {
+          "id": "ep12-episodic-memory",
+          "title": "EP 12 — Episodic Memory & Patterns",
+          "icon": "📓",
+          "description": "Episodes, reflections and feedback loops — agents that learn from experience.",
+          "contentBase": "/agentcore-episodic-memory/",
+          "chapters": [
+            {
+              "id": "Chapter_01_Episodic_Memory_Concept",
+              "title": "01 — Episodic Memory Concept",
+              "file": "Chapter_01_Episodic_Memory_Concept.md",
+              "sectionCount": 9
+            },
+            {
+              "id": "Chapter_02_Episodes_and_Reflections",
+              "title": "02 — Episodes And Reflections",
+              "file": "Chapter_02_Episodes_and_Reflections.md",
+              "sectionCount": 8
+            },
+            {
+              "id": "Chapter_03_Feedback_and_Loops",
+              "title": "03 — Feedback And Loops",
+              "file": "Chapter_03_Feedback_and_Loops.md",
+              "sectionCount": 8
+            }
+          ]
+        },
+        {
+          "id": "summary-notes",
+          "title": "Summary Notes — Whole Series",
+          "icon": "📝",
+          "description": "The entire playlist condensed — cheatsheet tables, commands, decision guide.",
+          "contentBase": "/agentcore-playlist/",
+          "chapters": [
+            {
+              "id": "Chapter_99_Summary_Notes",
+              "title": "99 — Summary Notes",
+              "file": "Chapter_99_Summary_Notes.md",
+              "sectionCount": 8
+            }
+          ]
+        },
+        {
+          "id": "nishant-notes",
+          "title": "Nishant's Notes",
+          "icon": "✍️",
+          "description": "Personal working notes — drop any .md into doc_nishant_notes/.",
+          "contentBase": "/nishant-notes/",
+          "chapters": [
+            {
+              "id": "welcome",
+              "title": "Welcome",
+              "file": "welcome.md",
+              "sectionCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bedrock",
+      "title": "Bedrock",
+      "icon": "🤖",
+      "subtitle": "Amazon Bedrock courses and workbooks",
+      "contentBase": "/bedrock/",
+      "courses": [
+        {
+          "id": "workbook",
+          "title": "Amazon Bedrock AgentCore Practical Workbook",
+          "description": "Step-by-step practical guide to building on Bedrock AgentCore.",
+          "icon": "🤖",
+          "contentBase": "/bedrock/",
+          "chapters": [
+            {
+              "id": "Chapter_01_introduction_to_bedrock_agentcore",
+              "title": "01 — Introduction To Bedrock Agentcore",
+              "file": "Chapter_01_introduction_to_bedrock_agentcore.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "Chapter_02_prerequisites",
+              "title": "02 — Prerequisites",
+              "file": "Chapter_02_prerequisites.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "Chapter_03_aws_configuration",
+              "title": "03 — Aws Configuration",
+              "file": "Chapter_03_aws_configuration.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "Chapter_04_clone_repository",
+              "title": "04 — Clone Repository",
+              "file": "Chapter_04_clone_repository.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "Chapter_05_repository_walkthrough",
+              "title": "05 — Repository Walkthrough",
+              "file": "Chapter_05_repository_walkthrough.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "Chapter_06_project_setup",
+              "title": "06 — Project Setup",
+              "file": "Chapter_06_project_setup.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "Chapter_07_configuration_files",
+              "title": "07 — Configuration Files",
+              "file": "Chapter_07_configuration_files.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "Chapter_08_running_the_application",
+              "title": "08 — Running The Application",
+              "file": "Chapter_08_running_the_application.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "Chapter_09_understanding_the_code",
+              "title": "09 — Understanding The Code",
+              "file": "Chapter_09_understanding_the_code.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "Chapter_10_agentcore_runtime",
+              "title": "10 — Agentcore Runtime",
+              "file": "Chapter_10_agentcore_runtime.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "Chapter_11_gateway",
+              "title": "11 — Gateway",
+              "file": "Chapter_11_gateway.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "Chapter_12_identity",
+              "title": "12 — Identity",
+              "file": "Chapter_12_identity.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "Chapter_13_memory",
+              "title": "13 — Memory",
+              "file": "Chapter_13_memory.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "Chapter_14_tools",
+              "title": "14 — Tools",
+              "file": "Chapter_14_tools.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "Chapter_15_deployment",
+              "title": "15 — Deployment",
+              "file": "Chapter_15_deployment.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "Chapter_16_observability",
+              "title": "16 — Observability",
+              "file": "Chapter_16_observability.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "Chapter_17_complete_end_to_end_flow",
+              "title": "17 — Complete End To End Flow",
+              "file": "Chapter_17_complete_end_to_end_flow.md",
+              "sectionCount": 19
+            },
+            {
+              "id": "appendix",
+              "title": "Appendix",
+              "file": "appendix.md",
+              "sectionCount": 4
+            },
+            {
+              "id": "references",
+              "title": "References",
+              "file": "references.md",
+              "sectionCount": 3
+            }
+          ]
+        },
+        {
+          "id": "aws-employee-video-playlist-summaries",
+          "title": "AWS Employee Video Playlist — Summaries",
+          "description": "",
+          "icon": "🎬",
+          "contentBase": "/bedrock/aws_employee_video_playlist/summaries/",
+          "chapters": [
+            {
+              "id": "01_notes",
+              "title": "01 — Notes",
+              "file": "aws_employee_video_playlist/summaries/01_notes.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "01_questions",
+              "title": "01 — Questions",
+              "file": "aws_employee_video_playlist/summaries/01_questions.md",
+              "sectionCount": 1
+            },
+            {
+              "id": "01_summary",
+              "title": "01 — Summary",
+              "file": "aws_employee_video_playlist/summaries/01_summary.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "02_data_engineering_relevance",
+              "title": "02 — Data Engineering Relevance",
+              "file": "aws_employee_video_playlist/summaries/02_data_engineering_relevance.md",
+              "sectionCount": 5
+            },
+            {
+              "id": "02_notes",
+              "title": "02 — Notes",
+              "file": "aws_employee_video_playlist/summaries/02_notes.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "02_questions",
+              "title": "02 — Questions",
+              "file": "aws_employee_video_playlist/summaries/02_questions.md",
+              "sectionCount": 1
+            },
+            {
+              "id": "02_summary",
+              "title": "02 — Summary",
+              "file": "aws_employee_video_playlist/summaries/02_summary.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "03_notes",
+              "title": "03 — Notes",
+              "file": "aws_employee_video_playlist/summaries/03_notes.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "03_questions",
+              "title": "03 — Questions",
+              "file": "aws_employee_video_playlist/summaries/03_questions.md",
+              "sectionCount": 1
+            },
+            {
+              "id": "03_summary",
+              "title": "03 — Summary",
+              "file": "aws_employee_video_playlist/summaries/03_summary.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "04_notes",
+              "title": "04 — Notes",
+              "file": "aws_employee_video_playlist/summaries/04_notes.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "04_questions",
+              "title": "04 — Questions",
+              "file": "aws_employee_video_playlist/summaries/04_questions.md",
+              "sectionCount": 1
+            },
+            {
+              "id": "04_summary",
+              "title": "04 — Summary",
+              "file": "aws_employee_video_playlist/summaries/04_summary.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "05_notes",
+              "title": "05 — Notes",
+              "file": "aws_employee_video_playlist/summaries/05_notes.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "05_questions",
+              "title": "05 — Questions",
+              "file": "aws_employee_video_playlist/summaries/05_questions.md",
+              "sectionCount": 1
+            },
+            {
+              "id": "05_summary",
+              "title": "05 — Summary",
+              "file": "aws_employee_video_playlist/summaries/05_summary.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "06_notes",
+              "title": "06 — Notes",
+              "file": "aws_employee_video_playlist/summaries/06_notes.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "06_questions",
+              "title": "06 — Questions",
+              "file": "aws_employee_video_playlist/summaries/06_questions.md",
+              "sectionCount": 1
+            },
+            {
+              "id": "06_summary",
+              "title": "06 — Summary",
+              "file": "aws_employee_video_playlist/summaries/06_summary.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "07_notes",
+              "title": "07 — Notes",
+              "file": "aws_employee_video_playlist/summaries/07_notes.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "07_questions",
+              "title": "07 — Questions",
+              "file": "aws_employee_video_playlist/summaries/07_questions.md",
+              "sectionCount": 1
+            },
+            {
+              "id": "07_summary",
+              "title": "07 — Summary",
+              "file": "aws_employee_video_playlist/summaries/07_summary.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "08_notes",
+              "title": "08 — Notes",
+              "file": "aws_employee_video_playlist/summaries/08_notes.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "08_questions",
+              "title": "08 — Questions",
+              "file": "aws_employee_video_playlist/summaries/08_questions.md",
+              "sectionCount": 1
+            },
+            {
+              "id": "08_summary",
+              "title": "08 — Summary",
+              "file": "aws_employee_video_playlist/summaries/08_summary.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "09_notes",
+              "title": "09 — Notes",
+              "file": "aws_employee_video_playlist/summaries/09_notes.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "09_questions",
+              "title": "09 — Questions",
+              "file": "aws_employee_video_playlist/summaries/09_questions.md",
+              "sectionCount": 1
+            },
+            {
+              "id": "09_summary",
+              "title": "09 — Summary",
+              "file": "aws_employee_video_playlist/summaries/09_summary.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "10_notes",
+              "title": "10 — Notes",
+              "file": "aws_employee_video_playlist/summaries/10_notes.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "10_questions",
+              "title": "10 — Questions",
+              "file": "aws_employee_video_playlist/summaries/10_questions.md",
+              "sectionCount": 1
+            },
+            {
+              "id": "10_summary",
+              "title": "10 — Summary",
+              "file": "aws_employee_video_playlist/summaries/10_summary.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "11_notes",
+              "title": "11 — Notes",
+              "file": "aws_employee_video_playlist/summaries/11_notes.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "11_questions",
+              "title": "11 — Questions",
+              "file": "aws_employee_video_playlist/summaries/11_questions.md",
+              "sectionCount": 1
+            },
+            {
+              "id": "11_summary",
+              "title": "11 — Summary",
+              "file": "aws_employee_video_playlist/summaries/11_summary.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "12_notes",
+              "title": "12 — Notes",
+              "file": "aws_employee_video_playlist/summaries/12_notes.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "12_questions",
+              "title": "12 — Questions",
+              "file": "aws_employee_video_playlist/summaries/12_questions.md",
+              "sectionCount": 1
+            },
+            {
+              "id": "12_summary",
+              "title": "12 — Summary",
+              "file": "aws_employee_video_playlist/summaries/12_summary.md",
+              "sectionCount": 2
+            },
+            {
+              "id": "recreate_workspace_skill",
+              "title": "Recreate Workspace Skill",
+              "file": "aws_employee_video_playlist/summaries/recreate_workspace_skill.md",
+              "sectionCount": 3
+            },
+            {
+              "id": "youtube_course_content_generator_skill",
+              "title": "Youtube Course Content Generator Skill",
+              "file": "aws_employee_video_playlist/summaries/youtube_course_content_generator_skill.md",
+              "sectionCount": 4
+            }
+          ]
+        },
+        {
+          "id": "summarised-notes-2nd-bedrock-notes",
+          "title": "Amazon Bedrock AgentCore Practical Workbook (Summarised Notes 2nd Bedrock Notes)",
+          "description": "",
+          "icon": "📚",
+          "contentBase": "/bedrock/",
+          "chapters": [
+            {
+              "id": "Chapter_01_introduction_to_bedrock_agentcore",
+              "title": "01 — Introduction To Bedrock Agentcore",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_01_introduction_to_bedrock_agentcore.md",
+              "sectionCount": 8
+            },
+            {
+              "id": "Chapter_02_prerequisites",
+              "title": "02 — Prerequisites",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_02_prerequisites.md",
+              "sectionCount": 7
+            },
+            {
+              "id": "Chapter_03_aws_configuration",
+              "title": "03 — Aws Configuration",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_03_aws_configuration.md",
+              "sectionCount": 6
+            },
+            {
+              "id": "Chapter_04_clone_repository",
+              "title": "04 — Clone Repository",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_04_clone_repository.md",
+              "sectionCount": 7
+            },
+            {
+              "id": "Chapter_05_repository_walkthrough",
+              "title": "05 — Repository Walkthrough",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_05_repository_walkthrough.md",
+              "sectionCount": 7
+            },
+            {
+              "id": "Chapter_06_project_setup",
+              "title": "06 — Project Setup",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_06_project_setup.md",
+              "sectionCount": 6
+            },
+            {
+              "id": "Chapter_07_configuration_files",
+              "title": "07 — Configuration Files",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_07_configuration_files.md",
+              "sectionCount": 8
+            },
+            {
+              "id": "Chapter_08_running_the_application",
+              "title": "08 — Running The Application",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_08_running_the_application.md",
+              "sectionCount": 6
+            },
+            {
+              "id": "Chapter_09_understanding_the_code",
+              "title": "09 — Understanding The Code",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_09_understanding_the_code.md",
+              "sectionCount": 7
+            },
+            {
+              "id": "Chapter_10_agentcore_runtime",
+              "title": "10 — Agentcore Runtime",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_10_agentcore_runtime.md",
+              "sectionCount": 8
+            },
+            {
+              "id": "Chapter_11_gateway",
+              "title": "11 — Gateway",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_11_gateway.md",
+              "sectionCount": 8
+            },
+            {
+              "id": "Chapter_12_identity",
+              "title": "12 — Identity",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_12_identity.md",
+              "sectionCount": 7
+            },
+            {
+              "id": "Chapter_13_memory",
+              "title": "13 — Memory",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_13_memory.md",
+              "sectionCount": 7
+            },
+            {
+              "id": "Chapter_14_tools",
+              "title": "14 — Tools",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_14_tools.md",
+              "sectionCount": 7
+            },
+            {
+              "id": "Chapter_15_deployment",
+              "title": "15 — Deployment",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_15_deployment.md",
+              "sectionCount": 7
+            },
+            {
+              "id": "Chapter_16_observability",
+              "title": "16 — Observability",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_16_observability.md",
+              "sectionCount": 7
+            },
+            {
+              "id": "Chapter_17_complete_end_to_end_flow",
+              "title": "17 — Complete End To End Flow",
+              "file": "Summarised_Notes_2nd_Bedrock_Notes/Chapter_17_complete_end_to_end_flow.md",
+              "sectionCount": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "linux",
+      "title": "Linux",
+      "icon": "🐧",
+      "subtitle": "Linux from foundations to production operations",
+      "contentBase": "/linux/",
+      "courses": [
+        {
+          "id": "phase-01-linux-foundations",
+          "title": "Phase 01 — Linux Foundations",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_01_History_of_Unix_and_Linux",
+              "title": "01 — History Of Unix And Linux",
+              "file": "Master_Course_v2/Phase_01_Linux_Foundations/Chapter_01_History_of_Unix_and_Linux.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_02_Linux_Distributions_and_Ecosystem",
+              "title": "02 — Linux Distributions And Ecosystem",
+              "file": "Master_Course_v2/Phase_01_Linux_Foundations/Chapter_02_Linux_Distributions_and_Ecosystem.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_03_Linux_Architecture_and_Kernel_Fundamentals",
+              "title": "03 — Linux Architecture And Kernel Fundamentals",
+              "file": "Master_Course_v2/Phase_01_Linux_Foundations/Chapter_03_Linux_Architecture_and_Kernel_Fundamentals.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_04_Linux_Boot_Process",
+              "title": "04 — Linux Boot Process",
+              "file": "Master_Course_v2/Phase_01_Linux_Foundations/Chapter_04_Linux_Boot_Process.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_05_Filesystem_Hierarchy_Standard",
+              "title": "05 — Filesystem Hierarchy Standard",
+              "file": "Master_Course_v2/Phase_01_Linux_Foundations/Chapter_05_Filesystem_Hierarchy_Standard.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-02-linux-essentials",
+          "title": "Phase 02 — Linux Essentials",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_06_Installing_Linux_on_VMware_and_VirtualBox",
+              "title": "06 — Installing Linux On VMware And VirtualBox",
+              "file": "Master_Course_v2/Phase_02_Linux_Essentials/Chapter_06_Installing_Linux_on_VMware_and_VirtualBox.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_07_First_Login_and_Terminal_Basics",
+              "title": "07 — First Login And Terminal Basics",
+              "file": "Master_Course_v2/Phase_02_Linux_Essentials/Chapter_07_First_Login_and_Terminal_Basics.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_08_Navigating_the_Linux_Filesystem",
+              "title": "08 — Navigating The Linux Filesystem",
+              "file": "Master_Course_v2/Phase_02_Linux_Essentials/Chapter_08_Navigating_the_Linux_Filesystem.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_09_File_and_Directory_Operations",
+              "title": "09 — File And Directory Operations",
+              "file": "Master_Course_v2/Phase_02_Linux_Essentials/Chapter_09_File_and_Directory_Operations.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_10_Text_Editors_vim_and_nano",
+              "title": "10 — Text Editors Vim And Nano",
+              "file": "Master_Course_v2/Phase_02_Linux_Essentials/Chapter_10_Text_Editors_vim_and_nano.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_11_Viewing_Files_Logs_Text_Processing",
+              "title": "11 — Viewing Files Logs Text Processing",
+              "file": "Master_Course_v2/Phase_02_Linux_Essentials/Chapter_11_Viewing_Files_Logs_Text_Processing.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_12_Help_System_and_Documentation",
+              "title": "12 — Help System And Documentation",
+              "file": "Master_Course_v2/Phase_02_Linux_Essentials/Chapter_12_Help_System_and_Documentation.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_13_IO_Redirection_Pipes_Wildcards",
+              "title": "13 — IO Redirection Pipes Wildcards",
+              "file": "Master_Course_v2/Phase_02_Linux_Essentials/Chapter_13_IO_Redirection_Pipes_Wildcards.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_14_Searching_Files_and_Pattern_Matching",
+              "title": "14 — Searching Files And Pattern Matching",
+              "file": "Master_Course_v2/Phase_02_Linux_Essentials/Chapter_14_Searching_Files_and_Pattern_Matching.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-03-file-management",
+          "title": "Phase 03 — File Management",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_15_Inodes_Hard_Links_and_Soft_Links",
+              "title": "15 — Inodes Hard Links And Soft Links",
+              "file": "Master_Course_v2/Phase_03_File_Management/Chapter_15_Inodes_Hard_Links_and_Soft_Links.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_16_Linux_Permissions_Deep_Dive",
+              "title": "16 — Linux Permissions Deep Dive",
+              "file": "Master_Course_v2/Phase_03_File_Management/Chapter_16_Linux_Permissions_Deep_Dive.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_17_Access_Control_Lists_ACL",
+              "title": "17 — Access Control Lists ACL",
+              "file": "Master_Course_v2/Phase_03_File_Management/Chapter_17_Access_Control_Lists_ACL.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_18_Special_Permissions_SUID_SGID_Sticky",
+              "title": "18 — Special Permissions SUID SGID Sticky",
+              "file": "Master_Course_v2/Phase_03_File_Management/Chapter_18_Special_Permissions_SUID_SGID_Sticky.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_19_Default_Permissions_and_Umask",
+              "title": "19 — Default Permissions And Umask",
+              "file": "Master_Course_v2/Phase_03_File_Management/Chapter_19_Default_Permissions_and_Umask.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_20_File_Ownership_chown_and_chgrp",
+              "title": "20 — File Ownership Chown And Chgrp",
+              "file": "Master_Course_v2/Phase_03_File_Management/Chapter_20_File_Ownership_chown_and_chgrp.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-04-users-and-administration",
+          "title": "Phase 04 — Users And Administration",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_21_User_Management_Basics",
+              "title": "21 — User Management Basics",
+              "file": "Master_Course_v2/Phase_04_Users_and_Administration/Chapter_21_User_Management_Basics.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_22_Group_Administration",
+              "title": "22 — Group Administration",
+              "file": "Master_Course_v2/Phase_04_Users_and_Administration/Chapter_22_Group_Administration.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_23_Sudo_and_Privilege_Escalation",
+              "title": "23 — Sudo And Privilege Escalation",
+              "file": "Master_Course_v2/Phase_04_Users_and_Administration/Chapter_23_Sudo_and_Privilege_Escalation.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_24_Password_Management_and_Aging",
+              "title": "24 — Password Management And Aging",
+              "file": "Master_Course_v2/Phase_04_Users_and_Administration/Chapter_24_Password_Management_and_Aging.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_25_User_Profiles_and_Initialization",
+              "title": "25 — User Profiles And Initialization",
+              "file": "Master_Course_v2/Phase_04_Users_and_Administration/Chapter_25_User_Profiles_and_Initialization.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_26_PAM_Fundamentals",
+              "title": "26 — PAM Fundamentals",
+              "file": "Master_Course_v2/Phase_04_Users_and_Administration/Chapter_26_PAM_Fundamentals.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-05-process-and-job-management",
+          "title": "Phase 05 — Process And Job Management",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_27_Process_Management_Basics",
+              "title": "27 — Process Management Basics",
+              "file": "Master_Course_v2/Phase_05_Process_and_Job_Management/Chapter_27_Process_Management_Basics.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_28_Background_Jobs_and_Tmux",
+              "title": "28 — Background Jobs And Tmux",
+              "file": "Master_Course_v2/Phase_05_Process_and_Job_Management/Chapter_28_Background_Jobs_and_Tmux.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_29_Systemd_and_systemctl",
+              "title": "29 — Systemd And Systemctl",
+              "file": "Master_Course_v2/Phase_05_Process_and_Job_Management/Chapter_29_Systemd_and_systemctl.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_30_Systemd_Targets_and_Journalctl",
+              "title": "30 — Systemd Targets And Journalctl",
+              "file": "Master_Course_v2/Phase_05_Process_and_Job_Management/Chapter_30_Systemd_Targets_and_Journalctl.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_31_Task_Scheduling",
+              "title": "31 — Task Scheduling",
+              "file": "Master_Course_v2/Phase_05_Process_and_Job_Management/Chapter_31_Task_Scheduling.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-05-process-and-service-management",
+          "title": "Phase 05 — Process And Service Management",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_27_Process_Management_Basics",
+              "title": "27 — Process Management Basics",
+              "file": "Master_Course_v2/Phase_05_Process_and_Service_Management/Chapter_27_Process_Management_Basics.md",
+              "sectionCount": 17
+            },
+            {
+              "id": "Chapter_28_Background_Jobs_and_Tmux",
+              "title": "28 — Background Jobs And Tmux",
+              "file": "Master_Course_v2/Phase_05_Process_and_Service_Management/Chapter_28_Background_Jobs_and_Tmux.md",
+              "sectionCount": 17
+            },
+            {
+              "id": "Chapter_29_Systemd_and_systemctl",
+              "title": "29 — Systemd And Systemctl",
+              "file": "Master_Course_v2/Phase_05_Process_and_Service_Management/Chapter_29_Systemd_and_systemctl.md",
+              "sectionCount": 17
+            },
+            {
+              "id": "Chapter_30_Systemd_Targets_and_Journalctl",
+              "title": "30 — Systemd Targets And Journalctl",
+              "file": "Master_Course_v2/Phase_05_Process_and_Service_Management/Chapter_30_Systemd_Targets_and_Journalctl.md",
+              "sectionCount": 17
+            },
+            {
+              "id": "Chapter_31_Task_Scheduling",
+              "title": "31 — Task Scheduling",
+              "file": "Master_Course_v2/Phase_05_Process_and_Service_Management/Chapter_31_Task_Scheduling.md",
+              "sectionCount": 17
+            }
+          ]
+        },
+        {
+          "id": "phase-06-package-management",
+          "title": "Phase 06 — Package Management",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_32_Package_Management_RPM_DNF",
+              "title": "32 — Package Management RPM DNF",
+              "file": "Master_Course_v2/Phase_06_Package_Management/Chapter_32_Package_Management_RPM_DNF.md",
+              "sectionCount": 17
+            },
+            {
+              "id": "Chapter_33_Package_Management_DPKG_APT",
+              "title": "33 — Package Management DPKG APT",
+              "file": "Master_Course_v2/Phase_06_Package_Management/Chapter_33_Package_Management_DPKG_APT.md",
+              "sectionCount": 17
+            },
+            {
+              "id": "Chapter_34_Compiling_from_Source",
+              "title": "34 — Compiling From Source",
+              "file": "Master_Course_v2/Phase_06_Package_Management/Chapter_34_Compiling_from_Source.md",
+              "sectionCount": 17
+            }
+          ]
+        },
+        {
+          "id": "phase-06-software-package-management",
+          "title": "Phase 06 — Software Package Management",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_32_Package_Management_RPM_DNF",
+              "title": "32 — Package Management RPM DNF",
+              "file": "Master_Course_v2/Phase_06_Software_Package_Management/Chapter_32_Package_Management_RPM_DNF.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_33_Package_Management_DPKG_APT",
+              "title": "33 — Package Management DPKG APT",
+              "file": "Master_Course_v2/Phase_06_Software_Package_Management/Chapter_33_Package_Management_DPKG_APT.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_34_Compiling_from_Source",
+              "title": "34 — Compiling From Source",
+              "file": "Master_Course_v2/Phase_06_Software_Package_Management/Chapter_34_Compiling_from_Source.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-07-storage-management",
+          "title": "Phase 07 — Storage Management",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_35_Storage_Fundamentals_Partitioning",
+              "title": "35 — Storage Fundamentals Partitioning",
+              "file": "Master_Course_v2/Phase_07_Storage_Management/Chapter_35_Storage_Fundamentals_Partitioning.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_36_Filesystem_Creation_Mounting",
+              "title": "36 — Filesystem Creation Mounting",
+              "file": "Master_Course_v2/Phase_07_Storage_Management/Chapter_36_Filesystem_Creation_Mounting.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_37_Swap_Space_Management",
+              "title": "37 — Swap Space Management",
+              "file": "Master_Course_v2/Phase_07_Storage_Management/Chapter_37_Swap_Space_Management.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_38_Logical_Volume_Management",
+              "title": "38 — Logical Volume Management",
+              "file": "Master_Course_v2/Phase_07_Storage_Management/Chapter_38_Logical_Volume_Management.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_39_LVM_Resizing_Snapshots",
+              "title": "39 — LVM Resizing Snapshots",
+              "file": "Master_Course_v2/Phase_07_Storage_Management/Chapter_39_LVM_Resizing_Snapshots.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_40_RAID_Fundamentals",
+              "title": "40 — RAID Fundamentals",
+              "file": "Master_Course_v2/Phase_07_Storage_Management/Chapter_40_RAID_Fundamentals.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-08-networking",
+          "title": "Phase 08 — Networking",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_41_Network_Configuration_Basics",
+              "title": "41 — Network Configuration Basics",
+              "file": "Master_Course_v2/Phase_08_Networking/Chapter_41_Network_Configuration_Basics.md",
+              "sectionCount": 17
+            },
+            {
+              "id": "Chapter_42_Network_Configuration_Tools",
+              "title": "42 — Network Configuration Tools",
+              "file": "Master_Course_v2/Phase_08_Networking/Chapter_42_Network_Configuration_Tools.md",
+              "sectionCount": 17
+            },
+            {
+              "id": "Chapter_43_Routing_and_Gateways",
+              "title": "43 — Routing And Gateways",
+              "file": "Master_Course_v2/Phase_08_Networking/Chapter_43_Routing_and_Gateways.md",
+              "sectionCount": 17
+            },
+            {
+              "id": "Chapter_44_DNS_and_Host_Resolution",
+              "title": "44 — DNS And Host Resolution",
+              "file": "Master_Course_v2/Phase_08_Networking/Chapter_44_DNS_and_Host_Resolution.md",
+              "sectionCount": 17
+            },
+            {
+              "id": "Chapter_45_Firewalld_and_iptables",
+              "title": "45 — Firewalld And Iptables",
+              "file": "Master_Course_v2/Phase_08_Networking/Chapter_45_Firewalld_and_iptables.md",
+              "sectionCount": 17
+            },
+            {
+              "id": "Chapter_46_Network_Troubleshooting",
+              "title": "46 — Network Troubleshooting",
+              "file": "Master_Course_v2/Phase_08_Networking/Chapter_46_Network_Troubleshooting.md",
+              "sectionCount": 17
+            }
+          ]
+        },
+        {
+          "id": "phase-08-networking-and-services",
+          "title": "Phase 08 — Networking And Services",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_41_Network_Configuration_Basics",
+              "title": "41 — Network Configuration Basics",
+              "file": "Master_Course_v2/Phase_08_Networking_and_Services/Chapter_41_Network_Configuration_Basics.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_42_Network_Configuration_Tools",
+              "title": "42 — Network Configuration Tools",
+              "file": "Master_Course_v2/Phase_08_Networking_and_Services/Chapter_42_Network_Configuration_Tools.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_43_Routing_and_Gateways",
+              "title": "43 — Routing And Gateways",
+              "file": "Master_Course_v2/Phase_08_Networking_and_Services/Chapter_43_Routing_and_Gateways.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_44_DNS_and_Host_Resolution",
+              "title": "44 — DNS And Host Resolution",
+              "file": "Master_Course_v2/Phase_08_Networking_and_Services/Chapter_44_DNS_and_Host_Resolution.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_45_Firewalld_and_iptables",
+              "title": "45 — Firewalld And Iptables",
+              "file": "Master_Course_v2/Phase_08_Networking_and_Services/Chapter_45_Firewalld_and_iptables.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_46_Network_Troubleshooting",
+              "title": "46 — Network Troubleshooting",
+              "file": "Master_Course_v2/Phase_08_Networking_and_Services/Chapter_46_Network_Troubleshooting.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-09-security",
+          "title": "Phase 09 — Security",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_47_OpenSSH_Configuration",
+              "title": "47 — OpenSSH Configuration",
+              "file": "Master_Course_v2/Phase_09_Security/Chapter_47_OpenSSH_Configuration.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_48_Securing_SSH",
+              "title": "48 — Securing SSH",
+              "file": "Master_Course_v2/Phase_09_Security/Chapter_48_Securing_SSH.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_49_SELinux_Fundamentals",
+              "title": "49 — SELinux Fundamentals",
+              "file": "Master_Course_v2/Phase_09_Security/Chapter_49_SELinux_Fundamentals.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_50_SELinux_Contexts",
+              "title": "50 — SELinux Contexts",
+              "file": "Master_Course_v2/Phase_09_Security/Chapter_50_SELinux_Contexts.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_51_Auditing_and_Logging",
+              "title": "51 — Auditing And Logging",
+              "file": "Master_Course_v2/Phase_09_Security/Chapter_51_Auditing_and_Logging.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_52_Vulnerability_Scanning",
+              "title": "52 — Vulnerability Scanning",
+              "file": "Master_Course_v2/Phase_09_Security/Chapter_52_Vulnerability_Scanning.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-10-monitoring",
+          "title": "Phase 10 — Monitoring",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_53_Performance_Monitoring",
+              "title": "53 — Performance Monitoring",
+              "file": "Master_Course_v2/Phase_10_Monitoring/Chapter_53_Performance_Monitoring.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_54_System_Activity_Reporter",
+              "title": "54 — System Activity Reporter",
+              "file": "Master_Course_v2/Phase_10_Monitoring/Chapter_54_System_Activity_Reporter.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_55_Network_Monitoring",
+              "title": "55 — Network Monitoring",
+              "file": "Master_Course_v2/Phase_10_Monitoring/Chapter_55_Network_Monitoring.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-11-web-and-application-servers",
+          "title": "Phase 11 — Web And Application Servers",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_56_Apache_Administration",
+              "title": "56 — Apache Administration",
+              "file": "Master_Course_v2/Phase_11_Web_and_Application_Servers/Chapter_56_Apache_Administration.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_57_Nginx_Web_Server",
+              "title": "57 — Nginx Web Server",
+              "file": "Master_Course_v2/Phase_11_Web_and_Application_Servers/Chapter_57_Nginx_Web_Server.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_58_Tomcat_Administration",
+              "title": "58 — Tomcat Administration",
+              "file": "Master_Course_v2/Phase_11_Web_and_Application_Servers/Chapter_58_Tomcat_Administration.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_59_Load_Balancing",
+              "title": "59 — Load Balancing",
+              "file": "Master_Course_v2/Phase_11_Web_and_Application_Servers/Chapter_59_Load_Balancing.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_60_SSL_Certificates",
+              "title": "60 — SSL Certificates",
+              "file": "Master_Course_v2/Phase_11_Web_and_Application_Servers/Chapter_60_SSL_Certificates.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-12-shell-scripting",
+          "title": "Phase 12 — Shell Scripting",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_61_Bash_Scripting_Basics",
+              "title": "61 — Bash Scripting Basics",
+              "file": "Master_Course_v2/Phase_12_Shell_Scripting/Chapter_61_Bash_Scripting_Basics.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_62_Control_Structures",
+              "title": "62 — Control Structures",
+              "file": "Master_Course_v2/Phase_12_Shell_Scripting/Chapter_62_Control_Structures.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_63_Functions_and_Errors",
+              "title": "63 — Functions And Errors",
+              "file": "Master_Course_v2/Phase_12_Shell_Scripting/Chapter_63_Functions_and_Errors.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_64_Text_Processing",
+              "title": "64 — Text Processing",
+              "file": "Master_Course_v2/Phase_12_Shell_Scripting/Chapter_64_Text_Processing.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_65_Automating_Tasks",
+              "title": "65 — Automating Tasks",
+              "file": "Master_Course_v2/Phase_12_Shell_Scripting/Chapter_65_Automating_Tasks.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-13-backup-and-recovery",
+          "title": "Phase 13 — Backup And Recovery",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_66_Rsync_and_Remote_Copy",
+              "title": "66 — Rsync And Remote Copy",
+              "file": "Master_Course_v2/Phase_13_Backup_and_Recovery/Chapter_66_Rsync_and_Remote_Copy.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_67_Tar_and_Compression",
+              "title": "67 — Tar And Compression",
+              "file": "Master_Course_v2/Phase_13_Backup_and_Recovery/Chapter_67_Tar_and_Compression.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_68_Disaster_Recovery",
+              "title": "68 — Disaster Recovery",
+              "file": "Master_Course_v2/Phase_13_Backup_and_Recovery/Chapter_68_Disaster_Recovery.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-14-databases",
+          "title": "Phase 14 — Databases",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_69_MySQL_Administration",
+              "title": "69 — MySQL Administration",
+              "file": "Master_Course_v2/Phase_14_Databases/Chapter_69_MySQL_Administration.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_70_PostgreSQL_Administration",
+              "title": "70 — PostgreSQL Administration",
+              "file": "Master_Course_v2/Phase_14_Databases/Chapter_70_PostgreSQL_Administration.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-15-enterprise-operations",
+          "title": "Phase 15 — Enterprise Operations",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_71_Chrony_and_NTP",
+              "title": "71 — Chrony And NTP",
+              "file": "Master_Course_v2/Phase_15_Enterprise_Operations/Chapter_71_Chrony_and_NTP.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_72_Postfix_MTA",
+              "title": "72 — Postfix MTA",
+              "file": "Master_Course_v2/Phase_15_Enterprise_Operations/Chapter_72_Postfix_MTA.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_73_File_Sharing_NFS_Samba",
+              "title": "73 — File Sharing NFS Samba",
+              "file": "Master_Course_v2/Phase_15_Enterprise_Operations/Chapter_73_File_Sharing_NFS_Samba.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-16-linux-in-cloud-and-devops",
+          "title": "Phase 16 — Linux In Cloud And DevOps",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_74_Git_Version_Control",
+              "title": "74 — Git Version Control",
+              "file": "Master_Course_v2/Phase_16_Linux_in_Cloud_and_DevOps/Chapter_74_Git_Version_Control.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_75_Docker_and_Containers",
+              "title": "75 — Docker And Containers",
+              "file": "Master_Course_v2/Phase_16_Linux_in_Cloud_and_DevOps/Chapter_75_Docker_and_Containers.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_76_AWS_and_SSH_Keys",
+              "title": "76 — AWS And SSH Keys",
+              "file": "Master_Course_v2/Phase_16_Linux_in_Cloud_and_DevOps/Chapter_76_AWS_and_SSH_Keys.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-17-production-troubleshooting",
+          "title": "Phase 17 — Production Troubleshooting",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_77_dmesg_Kernel_Panics",
+              "title": "77 — Dmesg Kernel Panics",
+              "file": "Master_Course_v2/Phase_17_Production_Troubleshooting/Chapter_77_dmesg_Kernel_Panics.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_78_Strace_and_Debugging",
+              "title": "78 — Strace And Debugging",
+              "file": "Master_Course_v2/Phase_17_Production_Troubleshooting/Chapter_78_Strace_and_Debugging.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_79_Rescue_Target_Password",
+              "title": "79 — Rescue Target Password",
+              "file": "Master_Course_v2/Phase_17_Production_Troubleshooting/Chapter_79_Rescue_Target_Password.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-18-production-architecture",
+          "title": "Phase 18 — Production Architecture",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_80_High_Availability_Keepalived",
+              "title": "80 — High Availability Keepalived",
+              "file": "Master_Course_v2/Phase_18_Production_Architecture/Chapter_80_High_Availability_Keepalived.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_81_Ansible_Basics",
+              "title": "81 — Ansible Basics",
+              "file": "Master_Course_v2/Phase_18_Production_Architecture/Chapter_81_Ansible_Basics.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-19-interview-preparation",
+          "title": "Phase 19 — Interview Preparation",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_82_Resume_Building",
+              "title": "82 — Resume Building",
+              "file": "Master_Course_v2/Phase_19_Interview_Preparation/Chapter_82_Resume_Building.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_83_Interview_Questions",
+              "title": "83 — Interview Questions",
+              "file": "Master_Course_v2/Phase_19_Interview_Preparation/Chapter_83_Interview_Questions.md",
+              "sectionCount": 28
+            },
+            {
+              "id": "Chapter_84_Scenario_Drills",
+              "title": "84 — Scenario Drills",
+              "file": "Master_Course_v2/Phase_19_Interview_Preparation/Chapter_84_Scenario_Drills.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "phase-20-capstone",
+          "title": "Phase 20 — Capstone",
+          "description": "",
+          "icon": "🐧",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_85_Capstone_Project",
+              "title": "85 — Capstone Project",
+              "file": "Master_Course_v2/Phase_20_Capstone/Chapter_85_Capstone_Project.md",
+              "sectionCount": 28
+            }
+          ]
+        },
+        {
+          "id": "uday-linux-course",
+          "title": "Uday Linux Course",
+          "description": "",
+          "icon": "📚",
+          "contentBase": "/linux/",
+          "chapters": [
+            {
+              "id": "Chapter_01_History_of_Unix_and_Linux",
+              "title": "01 — History Of Unix And Linux",
+              "file": "Uday_Linux_Course/Chapter_01_History_of_Unix_and_Linux.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_02_Linux_Distributions_and_Ecosystem",
+              "title": "02 — Linux Distributions And Ecosystem",
+              "file": "Uday_Linux_Course/Chapter_02_Linux_Distributions_and_Ecosystem.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_03_Linux_Architecture_and_Kernel_Fundamentals",
+              "title": "03 — Linux Architecture And Kernel Fundamentals",
+              "file": "Uday_Linux_Course/Chapter_03_Linux_Architecture_and_Kernel_Fundamentals.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_04_Linux_Boot_Process",
+              "title": "04 — Linux Boot Process",
+              "file": "Uday_Linux_Course/Chapter_04_Linux_Boot_Process.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_05_Filesystem_Hierarchy_Standard",
+              "title": "05 — Filesystem Hierarchy Standard",
+              "file": "Uday_Linux_Course/Chapter_05_Filesystem_Hierarchy_Standard.md",
+              "sectionCount": 22
+            },
+            {
+              "id": "Chapter_06_Installing_Linux_on_VMware_and_VirtualBox",
+              "title": "06 — Installing Linux On VMware And VirtualBox",
+              "file": "Uday_Linux_Course/Chapter_06_Installing_Linux_on_VMware_and_VirtualBox.md",
+              "sectionCount": 22
+            },
+            {
+              "id": "Chapter_07_First_Login_and_Terminal_Basics",
+              "title": "07 — First Login And Terminal Basics",
+              "file": "Uday_Linux_Course/Chapter_07_First_Login_and_Terminal_Basics.md",
+              "sectionCount": 22
+            },
+            {
+              "id": "Chapter_08_Navigating_the_Linux_Filesystem",
+              "title": "08 — Navigating The Linux Filesystem",
+              "file": "Uday_Linux_Course/Chapter_08_Navigating_the_Linux_Filesystem.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_09_File_and_Directory_Operations",
+              "title": "09 — File And Directory Operations",
+              "file": "Uday_Linux_Course/Chapter_09_File_and_Directory_Operations.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_10_Text_Editors_vim_and_nano",
+              "title": "10 — Text Editors Vim And Nano",
+              "file": "Uday_Linux_Course/Chapter_10_Text_Editors_vim_and_nano.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_11_Viewing_Files_Logs_Text_Processing",
+              "title": "11 — Viewing Files Logs Text Processing",
+              "file": "Uday_Linux_Course/Chapter_11_Viewing_Files_Logs_Text_Processing.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_12_Help_System_and_Documentation",
+              "title": "12 — Help System And Documentation",
+              "file": "Uday_Linux_Course/Chapter_12_Help_System_and_Documentation.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_13_IO_Redirection_Pipes_Wildcards",
+              "title": "13 — IO Redirection Pipes Wildcards",
+              "file": "Uday_Linux_Course/Chapter_13_IO_Redirection_Pipes_Wildcards.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_14_Searching_Files_and_Pattern_Matching",
+              "title": "14 — Searching Files And Pattern Matching",
+              "file": "Uday_Linux_Course/Chapter_14_Searching_Files_and_Pattern_Matching.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_15_Inodes_Hard_Links_and_Soft_Links",
+              "title": "15 — Inodes Hard Links And Soft Links",
+              "file": "Uday_Linux_Course/Chapter_15_Inodes_Hard_Links_and_Soft_Links.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_16_Linux_Permissions_Deep_Dive",
+              "title": "16 — Linux Permissions Deep Dive",
+              "file": "Uday_Linux_Course/Chapter_16_Linux_Permissions_Deep_Dive.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_17_Access_Control_Lists_ACL",
+              "title": "17 — Access Control Lists ACL",
+              "file": "Uday_Linux_Course/Chapter_17_Access_Control_Lists_ACL.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_18_Special_Permissions_SUID_SGID_Sticky",
+              "title": "18 — Special Permissions SUID SGID Sticky",
+              "file": "Uday_Linux_Course/Chapter_18_Special_Permissions_SUID_SGID_Sticky.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_19_Default_Permissions_and_Umask",
+              "title": "19 — Default Permissions And Umask",
+              "file": "Uday_Linux_Course/Chapter_19_Default_Permissions_and_Umask.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_20_File_Ownership_chown_and_chgrp",
+              "title": "20 — File Ownership Chown And Chgrp",
+              "file": "Uday_Linux_Course/Chapter_20_File_Ownership_chown_and_chgrp.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_21_User_Management_Basics",
+              "title": "21 — User Management Basics",
+              "file": "Uday_Linux_Course/Chapter_21_User_Management_Basics.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_22_Group_Administration",
+              "title": "22 — Group Administration",
+              "file": "Uday_Linux_Course/Chapter_22_Group_Administration.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_23_Sudo_and_Privilege_Escalation",
+              "title": "23 — Sudo And Privilege Escalation",
+              "file": "Uday_Linux_Course/Chapter_23_Sudo_and_Privilege_Escalation.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_24_Password_Management_and_Aging",
+              "title": "24 — Password Management And Aging",
+              "file": "Uday_Linux_Course/Chapter_24_Password_Management_and_Aging.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_25_User_Profiles_and_Initialization",
+              "title": "25 — User Profiles And Initialization",
+              "file": "Uday_Linux_Course/Chapter_25_User_Profiles_and_Initialization.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_26_PAM_Fundamentals",
+              "title": "26 — PAM Fundamentals",
+              "file": "Uday_Linux_Course/Chapter_26_PAM_Fundamentals.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_27_Process_Management_Basics",
+              "title": "27 — Process Management Basics",
+              "file": "Uday_Linux_Course/Chapter_27_Process_Management_Basics.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_28_Background_Jobs_and_Tmux",
+              "title": "28 — Background Jobs And Tmux",
+              "file": "Uday_Linux_Course/Chapter_28_Background_Jobs_and_Tmux.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_29_Systemd_and_systemctl",
+              "title": "29 — Systemd And Systemctl",
+              "file": "Uday_Linux_Course/Chapter_29_Systemd_and_systemctl.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_30_Systemd_Targets_and_Journalctl",
+              "title": "30 — Systemd Targets And Journalctl",
+              "file": "Uday_Linux_Course/Chapter_30_Systemd_Targets_and_Journalctl.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_31_Task_Scheduling",
+              "title": "31 — Task Scheduling",
+              "file": "Uday_Linux_Course/Chapter_31_Task_Scheduling.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_32_Package_Management_RPM_DNF",
+              "title": "32 — Package Management RPM DNF",
+              "file": "Uday_Linux_Course/Chapter_32_Package_Management_RPM_DNF.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_33_Package_Management_DPKG_APT",
+              "title": "33 — Package Management DPKG APT",
+              "file": "Uday_Linux_Course/Chapter_33_Package_Management_DPKG_APT.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_34_Compiling_from_Source",
+              "title": "34 — Compiling From Source",
+              "file": "Uday_Linux_Course/Chapter_34_Compiling_from_Source.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_35_Storage_Fundamentals_Partitioning",
+              "title": "35 — Storage Fundamentals Partitioning",
+              "file": "Uday_Linux_Course/Chapter_35_Storage_Fundamentals_Partitioning.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_36_Filesystem_Creation_Mounting",
+              "title": "36 — Filesystem Creation Mounting",
+              "file": "Uday_Linux_Course/Chapter_36_Filesystem_Creation_Mounting.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_37_Swap_Space_Management",
+              "title": "37 — Swap Space Management",
+              "file": "Uday_Linux_Course/Chapter_37_Swap_Space_Management.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_38_Logical_Volume_Management",
+              "title": "38 — Logical Volume Management",
+              "file": "Uday_Linux_Course/Chapter_38_Logical_Volume_Management.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_39_LVM_Resizing_Snapshots",
+              "title": "39 — LVM Resizing Snapshots",
+              "file": "Uday_Linux_Course/Chapter_39_LVM_Resizing_Snapshots.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_40_RAID_Fundamentals",
+              "title": "40 — RAID Fundamentals",
+              "file": "Uday_Linux_Course/Chapter_40_RAID_Fundamentals.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_41_Network_Configuration_Basics",
+              "title": "41 — Network Configuration Basics",
+              "file": "Uday_Linux_Course/Chapter_41_Network_Configuration_Basics.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_42_Network_Configuration_Tools",
+              "title": "42 — Network Configuration Tools",
+              "file": "Uday_Linux_Course/Chapter_42_Network_Configuration_Tools.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_43_Routing_and_Gateways",
+              "title": "43 — Routing And Gateways",
+              "file": "Uday_Linux_Course/Chapter_43_Routing_and_Gateways.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_44_DNS_and_Host_Resolution",
+              "title": "44 — DNS And Host Resolution",
+              "file": "Uday_Linux_Course/Chapter_44_DNS_and_Host_Resolution.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_45_Firewalld_and_iptables",
+              "title": "45 — Firewalld And Iptables",
+              "file": "Uday_Linux_Course/Chapter_45_Firewalld_and_iptables.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_46_Network_Troubleshooting",
+              "title": "46 — Network Troubleshooting",
+              "file": "Uday_Linux_Course/Chapter_46_Network_Troubleshooting.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_47_OpenSSH_Configuration",
+              "title": "47 — OpenSSH Configuration",
+              "file": "Uday_Linux_Course/Chapter_47_OpenSSH_Configuration.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_48_Securing_SSH",
+              "title": "48 — Securing SSH",
+              "file": "Uday_Linux_Course/Chapter_48_Securing_SSH.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_49_SELinux_Fundamentals",
+              "title": "49 — SELinux Fundamentals",
+              "file": "Uday_Linux_Course/Chapter_49_SELinux_Fundamentals.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_50_SELinux_Contexts",
+              "title": "50 — SELinux Contexts",
+              "file": "Uday_Linux_Course/Chapter_50_SELinux_Contexts.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_51_Auditing_and_Logging",
+              "title": "51 — Auditing And Logging",
+              "file": "Uday_Linux_Course/Chapter_51_Auditing_and_Logging.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_52_Vulnerability_Scanning",
+              "title": "52 — Vulnerability Scanning",
+              "file": "Uday_Linux_Course/Chapter_52_Vulnerability_Scanning.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_53_Performance_Monitoring",
+              "title": "53 — Performance Monitoring",
+              "file": "Uday_Linux_Course/Chapter_53_Performance_Monitoring.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_54_System_Activity_Reporter",
+              "title": "54 — System Activity Reporter",
+              "file": "Uday_Linux_Course/Chapter_54_System_Activity_Reporter.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_55_Network_Monitoring",
+              "title": "55 — Network Monitoring",
+              "file": "Uday_Linux_Course/Chapter_55_Network_Monitoring.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_56_Apache_Administration",
+              "title": "56 — Apache Administration",
+              "file": "Uday_Linux_Course/Chapter_56_Apache_Administration.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_57_Nginx_Web_Server",
+              "title": "57 — Nginx Web Server",
+              "file": "Uday_Linux_Course/Chapter_57_Nginx_Web_Server.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_58_Tomcat_Administration",
+              "title": "58 — Tomcat Administration",
+              "file": "Uday_Linux_Course/Chapter_58_Tomcat_Administration.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_59_Load_Balancing",
+              "title": "59 — Load Balancing",
+              "file": "Uday_Linux_Course/Chapter_59_Load_Balancing.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_60_SSL_Certificates",
+              "title": "60 — SSL Certificates",
+              "file": "Uday_Linux_Course/Chapter_60_SSL_Certificates.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_61_Bash_Scripting_Basics",
+              "title": "61 — Bash Scripting Basics",
+              "file": "Uday_Linux_Course/Chapter_61_Bash_Scripting_Basics.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_62_Control_Structures",
+              "title": "62 — Control Structures",
+              "file": "Uday_Linux_Course/Chapter_62_Control_Structures.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_63_Functions_and_Errors",
+              "title": "63 — Functions And Errors",
+              "file": "Uday_Linux_Course/Chapter_63_Functions_and_Errors.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_64_Text_Processing",
+              "title": "64 — Text Processing",
+              "file": "Uday_Linux_Course/Chapter_64_Text_Processing.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_65_Automating_Tasks",
+              "title": "65 — Automating Tasks",
+              "file": "Uday_Linux_Course/Chapter_65_Automating_Tasks.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_66_Rsync_and_Remote_Copy",
+              "title": "66 — Rsync And Remote Copy",
+              "file": "Uday_Linux_Course/Chapter_66_Rsync_and_Remote_Copy.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_67_Tar_and_Compression",
+              "title": "67 — Tar And Compression",
+              "file": "Uday_Linux_Course/Chapter_67_Tar_and_Compression.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_68_Disaster_Recovery",
+              "title": "68 — Disaster Recovery",
+              "file": "Uday_Linux_Course/Chapter_68_Disaster_Recovery.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_69_MySQL_Administration",
+              "title": "69 — MySQL Administration",
+              "file": "Uday_Linux_Course/Chapter_69_MySQL_Administration.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_70_PostgreSQL_Administration",
+              "title": "70 — PostgreSQL Administration",
+              "file": "Uday_Linux_Course/Chapter_70_PostgreSQL_Administration.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_71_Chrony_and_NTP",
+              "title": "71 — Chrony And NTP",
+              "file": "Uday_Linux_Course/Chapter_71_Chrony_and_NTP.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_72_Postfix_MTA",
+              "title": "72 — Postfix MTA",
+              "file": "Uday_Linux_Course/Chapter_72_Postfix_MTA.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_73_File_Sharing_NFS_Samba",
+              "title": "73 — File Sharing NFS Samba",
+              "file": "Uday_Linux_Course/Chapter_73_File_Sharing_NFS_Samba.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_74_Git_Version_Control",
+              "title": "74 — Git Version Control",
+              "file": "Uday_Linux_Course/Chapter_74_Git_Version_Control.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_75_Docker_and_Containers",
+              "title": "75 — Docker And Containers",
+              "file": "Uday_Linux_Course/Chapter_75_Docker_and_Containers.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_76_AWS_and_SSH_Keys",
+              "title": "76 — AWS And SSH Keys",
+              "file": "Uday_Linux_Course/Chapter_76_AWS_and_SSH_Keys.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_77_dmesg_Kernel_Panics",
+              "title": "77 — Dmesg Kernel Panics",
+              "file": "Uday_Linux_Course/Chapter_77_dmesg_Kernel_Panics.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_78_Strace_and_Debugging",
+              "title": "78 — Strace And Debugging",
+              "file": "Uday_Linux_Course/Chapter_78_Strace_and_Debugging.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_79_Rescue_Target_Password",
+              "title": "79 — Rescue Target Password",
+              "file": "Uday_Linux_Course/Chapter_79_Rescue_Target_Password.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_80_High_Availability_Keepalived",
+              "title": "80 — High Availability Keepalived",
+              "file": "Uday_Linux_Course/Chapter_80_High_Availability_Keepalived.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_81_Ansible_Basics",
+              "title": "81 — Ansible Basics",
+              "file": "Uday_Linux_Course/Chapter_81_Ansible_Basics.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_82_Resume_Building",
+              "title": "82 — Resume Building",
+              "file": "Uday_Linux_Course/Chapter_82_Resume_Building.md",
+              "sectionCount": 13
+            },
+            {
+              "id": "Chapter_83_Interview_Questions",
+              "title": "83 — Interview Questions",
+              "file": "Uday_Linux_Course/Chapter_83_Interview_Questions.md",
+              "sectionCount": 4
+            },
+            {
+              "id": "Chapter_84_Scenario_Drills",
+              "title": "84 — Scenario Drills",
+              "file": "Uday_Linux_Course/Chapter_84_Scenario_Drills.md",
+              "sectionCount": 12
+            },
+            {
+              "id": "Chapter_85_Capstone_Project",
+              "title": "85 — Capstone Project",
+              "file": "Uday_Linux_Course/Chapter_85_Capstone_Project.md",
+              "sectionCount": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "docker",
+      "title": "Docker",
+      "icon": "🐳",
+      "subtitle": "Docker containers, images, networking and Compose",
+      "contentBase": "/docker/",
+      "courses": [
+        {
+          "id": "docker",
+          "title": "Docker — Containers & Compose",
+          "description": "Containers, images, networking, volumes, Dockerfile mastery and Compose.",
+          "icon": "🐳",
+          "contentBase": "/docker/",
+          "chapters": [
+            {
+              "id": "module-01-introduction-to-containers-and-docker",
+              "title": "01 — Introduction To Containers And Docker",
+              "file": "Module_01_Introduction_to_Containers_and_Docker/introduction.md",
+              "sectionCount": 17
+            },
+            {
+              "id": "module-02-container-fundamentals",
+              "title": "02 — Container Fundamentals",
+              "file": "Module_02_Container_Fundamentals/fundamentals.md",
+              "sectionCount": 16
+            },
+            {
+              "id": "module-03-docker-architecture-and-internals",
+              "title": "03 — Docker Architecture And Internals",
+              "file": "Module_03_Docker_Architecture_and_Internals/architecture.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-04-installation-and-environment-setup",
+              "title": "04 — Installation And Environment Setup",
+              "file": "Module_04_Installation_and_Environment_Setup/setup.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-05-docker-cli-and-essential-commands",
+              "title": "05 — Docker CLI And Essential Commands",
+              "file": "Module_05_Docker_CLI_and_Essential_Commands/cli_commands.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-06-images-layers-and-registries",
+              "title": "06 — Images Layers And Registries",
+              "file": "Module_06_Images_Layers_and_Registries/images_registries.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-07-containers-and-lifecycle-management",
+              "title": "07 — Containers And Lifecycle Management",
+              "file": "Module_07_Containers_and_Lifecycle_Management/lifecycle.md",
+              "sectionCount": 14
+            },
+            {
+              "id": "module-08-docker-networking-deep-dive",
+              "title": "08 — Docker Networking Deep Dive",
+              "file": "Module_08_Docker_Networking_Deep_Dive/networking.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-09-docker-storage-volumes-and-bind-mounts",
+              "title": "09 — Docker Storage Volumes And Bind Mounts",
+              "file": "Module_09_Docker_Storage_Volumes_and_Bind_Mounts/storage.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-10-dockerfile-mastery",
+              "title": "10 — Dockerfile Mastery",
+              "file": "Module_10_Dockerfile_Mastery/dockerfile.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-11-docker-compose",
+              "title": "11 — Docker Compose",
+              "file": "Module_11_Docker_Compose/compose.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-12-multi-container-application-development",
+              "title": "12 — Multi Container Application Development",
+              "file": "Module_12_Multi-Container_Application_Development/multi_container.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-13-docker-security",
+              "title": "13 — Docker Security",
+              "file": "Module_13_Docker_Security/security.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-14-docker-performance-and-optimization",
+              "title": "14 — Docker Performance And Optimization",
+              "file": "Module_14_Docker_Performance_and_Optimization/performance.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-15-logging-monitoring-and-observability",
+              "title": "15 — Logging Monitoring And Observability",
+              "file": "Module_15_Logging_Monitoring_and_Observability/monitoring.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-16-debugging-and-troubleshooting",
+              "title": "16 — Debugging And Troubleshooting",
+              "file": "Module_16_Debugging_and_Troubleshooting/debugging.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-17-testing-containerized-applications",
+              "title": "17 — Testing Containerized Applications",
+              "file": "Module_17_Testing_Containerized_Applications/testing.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-18-ci-cd-with-docker",
+              "title": "18 — CI CD With Docker",
+              "file": "Module_18_CI_CD_with_Docker/cicd.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-19-docker-in-aws-azure-and-gcp",
+              "title": "19 — Docker In AWS Azure And GCP",
+              "file": "Module_19_Docker_in_AWS_Azure_and_GCP/cloud.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-20-enterprise-architecture-and-production-patterns",
+              "title": "20 — Enterprise Architecture And Production Patterns",
+              "file": "Module_20_Enterprise_Architecture_and_Production_Patterns/enterprise.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-21-design-patterns-and-anti-patterns",
+              "title": "21 — Design Patterns And Anti Patterns",
+              "file": "Module_21_Design_Patterns_and_Anti-Patterns/design_patterns.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-22-best-practices-and-interview-preparation",
+              "title": "22 — Best Practices And Interview Preparation",
+              "file": "Module_22_Best_Practices_and_Interview_Preparation/interview_prep.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-23-real-world-case-studies",
+              "title": "23 — Real World Case Studies",
+              "file": "Module_23_Real-World_Case_Studies/case_studies.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-24-enterprise-capstone-project",
+              "title": "24 — Enterprise Capstone Project",
+              "file": "Module_24_Enterprise_Capstone_Project/capstone.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "module-25-final-review-certification-guide-and-career-preparation",
+              "title": "25 — Final Review Certification Guide And Career Preparation",
+              "file": "Module_25_Final_Review_Certification_Guide_and_Career_Preparation/prep.md",
+              "sectionCount": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "python-devops",
+      "title": "Python & DevOps",
+      "icon": "🐍",
+      "subtitle": "Python programming for DevOps and automation",
+      "contentBase": "/python-devops/",
+      "courses": [
+        {
+          "id": "python-devops",
+          "title": "Python for DevOps",
+          "description": "Python fundamentals through automation, APIs and DevOps workflows.",
+          "icon": "🐍",
+          "contentBase": "/python-devops/",
+          "chapters": [
+            {
+              "id": "ch01-getting-started-with-python-devops",
+              "title": "01 — Ch01 Getting Started With Python Devops",
+              "file": "ch01-getting-started-with-python-devops.md",
+              "sectionCount": 6
+            },
+            {
+              "id": "ch02-python-data-types",
+              "title": "02 — Ch02 Python Data Types",
+              "file": "ch02-python-data-types.md",
+              "sectionCount": 7
+            },
+            {
+              "id": "ch03-python-data-structures",
+              "title": "03 — Ch03 Python Data Structures",
+              "file": "ch03-python-data-structures.md",
+              "sectionCount": 6
+            },
+            {
+              "id": "ch04-python-control-flow",
+              "title": "04 — Ch04 Python Control Flow",
+              "file": "ch04-python-control-flow.md",
+              "sectionCount": 6
+            },
+            {
+              "id": "ch05-python-functions-modularity",
+              "title": "05 — Ch05 Python Functions Modularity",
+              "file": "ch05-python-functions-modularity.md",
+              "sectionCount": 6
+            },
+            {
+              "id": "ch06-python-error-handling",
+              "title": "06 — Ch06 Python Error Handling",
+              "file": "ch06-python-error-handling.md",
+              "sectionCount": 6
+            },
+            {
+              "id": "ch07-linux-file-directory-automation",
+              "title": "07 — Ch07 Linux File Directory Automation",
+              "file": "ch07-linux-file-directory-automation.md",
+              "sectionCount": 36
+            },
+            {
+              "id": "ch08-command-execution-env-vars",
+              "title": "08 — Ch08 Command Execution Env Vars",
+              "file": "ch08-command-execution-env-vars.md",
+              "sectionCount": 36
+            },
+            {
+              "id": "ch09-working-with-data-formats",
+              "title": "09 — Ch09 Working With Data Formats",
+              "file": "ch09-working-with-data-formats.md",
+              "sectionCount": 57
+            },
+            {
+              "id": "ch10-http-rest-api-fundamentals",
+              "title": "10 — Ch10 Http Rest Api Fundamentals",
+              "file": "ch10-http-rest-api-fundamentals.md",
+              "sectionCount": 36
+            },
+            {
+              "id": "ch11-api-security-authentication",
+              "title": "11 — Ch11 Api Security Authentication",
+              "file": "ch11-api-security-authentication.md",
+              "sectionCount": 18
+            },
+            {
+              "id": "ch12-cloud-fundamentals-neutral-automation",
+              "title": "12 — Ch12 Cloud Fundamentals Neutral Automation",
+              "file": "ch12-cloud-fundamentals-neutral-automation.md",
+              "sectionCount": 20
+            },
+            {
+              "id": "ch13-aws-automation-boto3",
+              "title": "13 — Ch13 Aws Automation Boto3",
+              "file": "ch13-aws-automation-boto3.md",
+              "sectionCount": 10
+            },
+            {
+              "id": "ch14-azure-gcp-automation",
+              "title": "14 — Ch14 Azure Gcp Automation",
+              "file": "ch14-azure-gcp-automation.md",
+              "sectionCount": 17
+            },
+            {
+              "id": "ch15-git-and-python",
+              "title": "15 — Ch15 Git And Python",
+              "file": "ch15-git-and-python.md",
+              "sectionCount": 14
+            },
+            {
+              "id": "ch16-cicd-fundamentals",
+              "title": "16 — Ch16 Cicd Fundamentals",
+              "file": "ch16-cicd-fundamentals.md",
+              "sectionCount": 7
+            },
+            {
+              "id": "ch17-cicd-automation-jenkins-github-actions",
+              "title": "17 — Ch17 Cicd Automation Jenkins Github Actions",
+              "file": "ch17-cicd-automation-jenkins-github-actions.md",
+              "sectionCount": 23
+            },
+            {
+              "id": "ch18-infrastructure-as-code",
+              "title": "18 — Ch18 Infrastructure As Code",
+              "file": "ch18-infrastructure-as-code.md",
+              "sectionCount": 11
+            },
+            {
+              "id": "ch19-containers-with-docker",
+              "title": "19 — Ch19 Containers With Docker",
+              "file": "ch19-containers-with-docker.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "ch20-kubernetes-python-automation",
+              "title": "20 — Ch20 Kubernetes Python Automation",
+              "file": "ch20-kubernetes-python-automation.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "ch21-system-monitoring-observability",
+              "title": "21 — Ch21 System Monitoring Observability",
+              "file": "ch21-system-monitoring-observability.md",
+              "sectionCount": 4
+            },
+            {
+              "id": "ch22-logging-log-management",
+              "title": "22 — Ch22 Logging Log Management",
+              "file": "ch22-logging-log-management.md",
+              "sectionCount": 7
+            },
+            {
+              "id": "ch23-prometheus-cloudwatch",
+              "title": "23 — Ch23 Prometheus Cloudwatch",
+              "file": "ch23-prometheus-cloudwatch.md",
+              "sectionCount": 8
+            },
+            {
+              "id": "ch24-oop-for-devops",
+              "title": "24 — Ch24 Oop For Devops",
+              "file": "ch24-oop-for-devops.md",
+              "sectionCount": 7
+            },
+            {
+              "id": "ch25-cli-tools-regex",
+              "title": "25 — Ch25 Cli Tools Regex",
+              "file": "ch25-cli-tools-regex.md",
+              "sectionCount": 7
+            },
+            {
+              "id": "ch26-quality-testing",
+              "title": "26 — Ch26 Quality Testing",
+              "file": "ch26-quality-testing.md",
+              "sectionCount": 36
+            },
+            {
+              "id": "ch27-security-automation",
+              "title": "27 — Ch27 Security Automation",
+              "file": "ch27-security-automation.md",
+              "sectionCount": 29
+            },
+            {
+              "id": "ch28-resilient-automation",
+              "title": "28 — Ch28 Resilient Automation",
+              "file": "ch28-resilient-automation.md",
+              "sectionCount": 25
+            },
+            {
+              "id": "ch29-production-grade-automation",
+              "title": "29 — Ch29 Production Grade Automation",
+              "file": "ch29-production-grade-automation.md",
+              "sectionCount": 6
+            },
+            {
+              "id": "ch30-modern-automation-patterns",
+              "title": "30 — Ch30 Modern Automation Patterns",
+              "file": "ch30-modern-automation-patterns.md",
+              "sectionCount": 22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kubernetes",
+      "title": "Kubernetes",
+      "icon": "☸️",
+      "subtitle": "Kubernetes architecture, objects and production labs",
+      "contentBase": "/kubernetes/",
+      "courses": [
+        {
+          "id": "kubernetes",
+          "title": "Kubernetes — From Containers to Production",
+          "description": "Kubernetes architecture, kubectl, objects, networking, storage and EKS.",
+          "icon": "☸️",
+          "contentBase": "/kubernetes/",
+          "chapters": [
+            {
+              "id": "Level-00-Linux-Networking-Prerequisites",
+              "title": "00 — Linux Networking Prerequisites",
+              "file": "chapters/Level-00-Linux-Networking-Prerequisites.md",
+              "sectionCount": 29
+            },
+            {
+              "id": "Level-01-Containers-and-Docker",
+              "title": "01 — Containers And Docker",
+              "file": "chapters/Level-01-Containers-and-Docker.md",
+              "sectionCount": 23
+            },
+            {
+              "id": "Level-02-Docker-vs-Kubernetes",
+              "title": "02 — Docker Vs Kubernetes",
+              "file": "chapters/Level-02-Docker-vs-Kubernetes.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "Level-03-Kubernetes-Introduction",
+              "title": "03 — Kubernetes Introduction",
+              "file": "chapters/Level-03-Kubernetes-Introduction.md",
+              "sectionCount": 16
+            },
+            {
+              "id": "Level-04-Kubernetes-Architecture",
+              "title": "04 — Kubernetes Architecture",
+              "file": "chapters/Level-04-Kubernetes-Architecture.md",
+              "sectionCount": 12
+            },
+            {
+              "id": "Level-05-Kubernetes-Installation",
+              "title": "05 — Kubernetes Installation",
+              "file": "chapters/Level-05-Kubernetes-Installation.md",
+              "sectionCount": 13
+            },
+            {
+              "id": "Level-06-kubectl-Deep-Dive",
+              "title": "06 — Kubectl Deep Dive",
+              "file": "chapters/Level-06-kubectl-Deep-Dive.md",
+              "sectionCount": 12
+            },
+            {
+              "id": "Level-07-Kubernetes-Core-Objects",
+              "title": "07 — Kubernetes Core Objects",
+              "file": "chapters/Level-07-Kubernetes-Core-Objects.md",
+              "sectionCount": 17
+            },
+            {
+              "id": "Level-08-Pods-Deep-Dive",
+              "title": "08 — Pods Deep Dive",
+              "file": "chapters/Level-08-Pods-Deep-Dive.md",
+              "sectionCount": 17
+            },
+            {
+              "id": "Level-09-Kubernetes-Networking",
+              "title": "09 — Kubernetes Networking",
+              "file": "chapters/Level-09-Kubernetes-Networking.md",
+              "sectionCount": 14
+            },
+            {
+              "id": "Level-10-Kubernetes-Storage",
+              "title": "10 — Kubernetes Storage",
+              "file": "chapters/Level-10-Kubernetes-Storage.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "Level-11-Configuration-and-Secrets",
+              "title": "11 — Configuration And Secrets",
+              "file": "chapters/Level-11-Configuration-and-Secrets.md",
+              "sectionCount": 11
+            },
+            {
+              "id": "Level-12-Scheduling",
+              "title": "12 — Scheduling",
+              "file": "chapters/Level-12-Scheduling.md",
+              "sectionCount": 16
+            },
+            {
+              "id": "Level-13-Deployments-and-Rollouts",
+              "title": "13 — Deployments And Rollouts",
+              "file": "chapters/Level-13-Deployments-and-Rollouts.md",
+              "sectionCount": 14
+            },
+            {
+              "id": "Level-14-Autoscaling",
+              "title": "14 — Autoscaling",
+              "file": "chapters/Level-14-Autoscaling.md",
+              "sectionCount": 14
+            },
+            {
+              "id": "Level-15-Security-and-RBAC",
+              "title": "15 — Security And RBAC",
+              "file": "chapters/Level-15-Security-and-RBAC.md",
+              "sectionCount": 14
+            },
+            {
+              "id": "Level-16-AWS-Fundamentals",
+              "title": "16 — AWS Fundamentals",
+              "file": "chapters/Level-16-AWS-Fundamentals.md",
+              "sectionCount": 11
+            },
+            {
+              "id": "Level-17-Amazon-EKS",
+              "title": "17 — Amazon EKS",
+              "file": "chapters/Level-17-Amazon-EKS.md",
+              "sectionCount": 12
+            },
+            {
+              "id": "Level-18-EKS-Networking",
+              "title": "18 — EKS Networking",
+              "file": "chapters/Level-18-EKS-Networking.md",
+              "sectionCount": 13
+            },
+            {
+              "id": "Level-19-Git-for-DevOps",
+              "title": "19 — Git For DevOps",
+              "file": "chapters/Level-19-Git-for-DevOps.md",
+              "sectionCount": 8
+            },
+            {
+              "id": "Level-20-CICD-Pipelines",
+              "title": "20 — CICD Pipelines",
+              "file": "chapters/Level-20-CICD-Pipelines.md",
+              "sectionCount": 11
+            },
+            {
+              "id": "Level-21-Terraform-EKS",
+              "title": "21 — Terraform EKS",
+              "file": "chapters/Level-21-Terraform-EKS.md",
+              "sectionCount": 13
+            },
+            {
+              "id": "Level-22-Helm",
+              "title": "22 — Helm",
+              "file": "chapters/Level-22-Helm.md",
+              "sectionCount": 10
+            },
+            {
+              "id": "Level-23-GitOps-ArgoCD",
+              "title": "23 — GitOps ArgoCD",
+              "file": "chapters/Level-23-GitOps-ArgoCD.md",
+              "sectionCount": 11
+            },
+            {
+              "id": "Level-24-Monitoring-Observability",
+              "title": "24 — Monitoring Observability",
+              "file": "chapters/Level-24-Monitoring-Observability.md",
+              "sectionCount": 10
+            },
+            {
+              "id": "Level-25-Production-Operations",
+              "title": "25 — Production Operations",
+              "file": "chapters/Level-25-Production-Operations.md",
+              "sectionCount": 9
+            },
+            {
+              "id": "Level-26-Troubleshooting",
+              "title": "26 — Troubleshooting",
+              "file": "chapters/Level-26-Troubleshooting.md",
+              "sectionCount": 10
+            },
+            {
+              "id": "Level-27-Production-Incidents",
+              "title": "27 — Production Incidents",
+              "file": "chapters/Level-27-Production-Incidents.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "Level-28-Enterprise-Architecture",
+              "title": "28 — Enterprise Architecture",
+              "file": "chapters/Level-28-Enterprise-Architecture.md",
+              "sectionCount": 12
+            },
+            {
+              "id": "Level-29-Interview-Question-Bank",
+              "title": "29 — Interview Question Bank",
+              "file": "chapters/Level-29-Interview-Question-Bank.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "Level-30-Capstone-Projects",
+              "title": "30 — Capstone Projects",
+              "file": "chapters/Level-30-Capstone-Projects.md",
+              "sectionCount": 8
+            },
+            {
+              "id": "Kubernetes_AWS_EKS_Master_Curriculum",
+              "title": "Kubernetes AWS EKS Master Curriculum",
+              "file": "Kubernetes_AWS_EKS_Master_Curriculum.md",
+              "sectionCount": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bedrock-to-production",
+      "title": "Bedrock to Production",
+      "icon": "🚀",
+      "subtitle": "Amazon Bedrock production course — GenAI foundations to AgentCore",
+      "contentBase": "/bedrock-deepti/",
+      "courses": [
+        {
+          "id": "core-chapters",
+          "title": "Core Chapters",
+          "description": "Main guided chapters of the Bedrock by Deepti course.",
+          "icon": "🤖",
+          "contentBase": "/bedrock-deepti/",
+          "chapters": [
+            {
+              "id": "Chapter_01_Introduction_to_Amazon_Bedrock",
+              "title": "01 — Introduction To Amazon Bedrock",
+              "file": "Chapter_01_Introduction_to_Amazon_Bedrock.md",
+              "sectionCount": 15
+            },
+            {
+              "id": "Chapter_02_Bedrock_AgentCore_Production_Ready_Agents",
+              "title": "02 — Bedrock AgentCore Production Ready Agents",
+              "file": "Chapter_02_Bedrock_AgentCore_Production_Ready_Agents.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_03_Building_Agentic_AI_Applications_with_Strands_Agents_and_MCP",
+              "title": "03 — Building Agentic AI Applications With Strands Agents And MCP",
+              "file": "Chapter_03_Building_Agentic_AI_Applications_with_Strands_Agents_and_MCP.md",
+              "sectionCount": 27
+            },
+            {
+              "id": "Chapter_04_AgentCore_Runtime_Prototype_to_Production",
+              "title": "04 — AgentCore Runtime Prototype To Production",
+              "file": "Chapter_04_AgentCore_Runtime_Prototype_to_Production.md",
+              "sectionCount": 24
+            },
+            {
+              "id": "Chapter_05_AgentCore_Gateway_Connecting_Agents_to_Tools",
+              "title": "05 — AgentCore Gateway Connecting Agents To Tools",
+              "file": "Chapter_05_AgentCore_Gateway_Connecting_Agents_to_Tools.md",
+              "sectionCount": 20
+            },
+            {
+              "id": "Chapter_06_AgentCore_Identity_Secure_Agent_Workflows",
+              "title": "06 — AgentCore Identity Secure Agent Workflows",
+              "file": "Chapter_06_AgentCore_Identity_Secure_Agent_Workflows.md",
+              "sectionCount": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ecommerce-architecture",
+      "title": "eCommerce Architecture on AWS",
+      "icon": "🛒",
+      "subtitle": "Interview prep — design an eCommerce platform on AWS from scratch, layer by layer",
+      "contentBase": "/ecommerce-architecture/",
+      "courses": [
+        {
+          "id": "core-chapters",
+          "title": "Core Chapters",
+          "description": "Design a complete e-commerce platform on AWS — cloud-agnostic first, then every AWS service mapped. Interview-ready.",
+          "icon": "🛒",
+          "contentBase": "/ecommerce-architecture/",
+          "chapters": [
+            {
+              "id": "Chapter_01_Core_Architecture",
+              "title": "01 — Core Architecture",
+              "file": "Chapter_01_Core_Architecture.md",
+              "sectionCount": 10
+            },
+            {
+              "id": "Chapter_02_Search_Orders_Recommendations_Analytics",
+              "title": "02 — Search Orders Recommendations Analytics",
+              "file": "Chapter_02_Search_Orders_Recommendations_Analytics.md",
+              "sectionCount": 9
+            },
+            {
+              "id": "Chapter_03_Mapping_to_AWS_Services",
+              "title": "03 — Mapping To AWS Services",
+              "file": "Chapter_03_Mapping_to_AWS_Services.md",
+              "sectionCount": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "microservices-aws",
+      "title": "Microservices on AWS",
+      "icon": "🧩",
+      "subtitle": "Choose the right platform (Lambda vs ECS vs EKS), then build & operate a real microservice — re:Invent session",
+      "contentBase": "/microservices-choose/",
+      "courses": [
+        {
+          "id": "choose-platform",
+          "title": "Choose the Platform — Lambda vs ECS vs EKS",
+          "icon": "⚖️",
+          "description": "Event-driven functions vs serverless containers vs Kubernetes — the 3-question decision, cost math and cold starts.",
+          "contentBase": "/microservices-choose/",
+          "chapters": [
+            {
+              "id": "Chapter_01_Three_Platforms",
+              "title": "01 — Three Platforms",
+              "file": "Chapter_01_Three_Platforms.md",
+              "sectionCount": 8
+            },
+            {
+              "id": "Chapter_02_Decision_Framework",
+              "title": "02 — Decision Framework",
+              "file": "Chapter_02_Decision_Framework.md",
+              "sectionCount": 8
+            }
+          ]
+        },
+        {
+          "id": "build-and-operate",
+          "title": "Build & Operate — re:Invent Session",
+          "icon": "🚀",
+          "description": "A real microservice on EKS+Lambda+SQS+DynamoDB — provisioned with CloudFormation, broken live, then observed and rightsized.",
+          "contentBase": "/microservices-reinvent/",
+          "chapters": [
+            {
+              "id": "Chapter_01_Modern_Microservice",
+              "title": "01 — Modern Microservice",
+              "file": "Chapter_01_Modern_Microservice.md",
+              "sectionCount": 8
+            },
+            {
+              "id": "Chapter_02_Space_Migration_App",
+              "title": "02 — Space Migration App",
+              "file": "Chapter_02_Space_Migration_App.md",
+              "sectionCount": 8
+            },
+            {
+              "id": "Chapter_03_Observability_Operations",
+              "title": "03 — Observability Operations",
+              "file": "Chapter_03_Observability_Operations.md",
+              "sectionCount": 10
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
